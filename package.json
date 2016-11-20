@@ -1,0 +1,20 @@
+{
+  "name": "theappforge-landing",
+  "version": "0.0.1",
+  "description": "The App Forge Landing Page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/index.js"
+  },
+  "author": "Igor Sholom",
+  "license": "ISC",
+  "dependencies": {
+    "express": "*",
+    "mongojs": "*",
+    "body-parser": "*",
+    "auth-header": "*",
+    "crypto": "*",
+    "node-uuid": "*"
+  }
+}

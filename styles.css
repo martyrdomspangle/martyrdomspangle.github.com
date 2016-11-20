@@ -1,0 +1,37 @@
+.header {
+  background-color: transparent;
+}
+
+.header-menu {
+  list-style-type: none;
+}
+
+.header-menu li {
+  font-weight: 600;
+  font-size: 16px;
+  display: inline-block;
+  margin: 20px;
+}
+
+.header-menu li a {
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.logo {
+  color: rgb(255, 30, 30);
+  font-size: 24px;
+}
+
+.hire a {
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.hire a:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
