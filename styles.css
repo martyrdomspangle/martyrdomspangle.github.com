@@ -17,6 +17,10 @@
   margin: 20px;
 }
 
+.header-menu li:first-child {
+  margin-left: 0;
+}
+
 .header-menu li a {
   cursor: pointer;
   text-decoration: none;
