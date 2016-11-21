@@ -17,10 +17,7 @@ $(document).ready(function() {
 
     if (currScroll > prevScrollPosition && !direction) {
       direction = true;
-      $('.content').css('margin-top', 0);
-      $('.header').hide(500);
-      $('.header').css('position', 'static');
-      $('.header').show();
+      $('.header').hide("slide", {direction: "top" }, "slow");
     } else 
     if (currScroll < prevScrollPosition && direction) {
       direction = false;
@@ -28,7 +25,7 @@ $(document).ready(function() {
       $('.content').css('margin-top', $('.header').css('height'));
       $('.header').css('position', 'fixed');
       $('.header').css('top', '0');
-      $('.header').show(500);
+      $('.header').hide("slide", {direction: "bottom" }, "slow");
     }
 
     prevScrollPosition = currScroll;
