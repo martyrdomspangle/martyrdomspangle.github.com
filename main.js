@@ -1,37 +1,45 @@
-const setSize = function() {
-  const headerHeight = parseFloat($('.header').css('height'));
-  $('.header-section').css('height', $(window).height() - headerHeight);
+const setSize = function () {
+    const headerHeight = parseFloat($('.header').css('height'));
+    $('.header-section').css('height', $(window).height() - headerHeight);
 };
 
-let prevScrollPosition = $(window).scrollTop();
-let direction = true;
+$(document).ready(function () {
+    setSize();
+    const headerHeight = parseFloat($('.header').css('height'));
 
-$(document).ready(function() {
-  setSize();
-  const headerHeight = parseFloat($('.header').css('height'));
+    //Header
+    var headerSize = $('header').outerHeight();
+    var scrolled;
+    var scrollPosition = 0;
+    var pixelsToScroll = 10;
+    var timeStamp = 150;
 
-  $(window).scroll(function() {
-    const currScroll = $(window).scrollTop();
-
-    if (currScroll < headerHeight) return;
-
-    if (currScroll > prevScrollPosition && !direction) {
-      direction = true;
-      $('.header').hide("slide", {direction: "top" }, "slow");
-    } else 
-    if (currScroll < prevScrollPosition && direction) {
-      direction = false;
-      $('.header').hide();
-      $('.content').css('margin-top', $('.header').css('height'));
-      $('.header').css('position', 'fixed');
-      $('.header').css('top', '0');
-      $('.header').hide("slide", {direction: "bottom" }, "slow");
+    var changePosition = function () {
+        var st = $(this).scrollTop();
+        if (Math.abs(scrollPosition - st) <= pixelsToScroll)
+            return;
+        if (st > scrollPosition && st > headerSize) {
+            $('header').removeClass('scroll-down').addClass('scroll-up');
+        } else {
+            if (st + $(window).height() < $(document).height()) {
+                $('header').removeClass('scroll-up').addClass('scroll-down');
+            }
+        }
+        scrollPosition = st;
     }
+    $(window).scroll(function (event) {
+        scrolled = true;
+    });
 
-    prevScrollPosition = currScroll;
-  });
+    setInterval(function () {
+        if (scrolled) {
+            changePosition();
+            scrolled = false;
+        }
+    }, timeStamp);
+    //Header
 });
 
-$(window).resize(function() {
-  setSize();
+$(window).resize(function () {
+    setSize();
 });
