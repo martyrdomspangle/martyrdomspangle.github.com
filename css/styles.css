@@ -1,6 +1,9 @@
 body {
 	font-family: franklin-gothic-demi !important;
-    padding-top: 70px;
+  padding-top: 70px;
+  margin:0;
+  height:100vh;
+  width:100vw;
 }
 .header {
   background-color: white;
@@ -25,7 +28,7 @@ body {
   font-weight: 600;
   font-size: 11pt;
   display: inline-block;
-  margin: 20px;
+  margin: 25px;
 }
 
 .header-menu li:first-child {
@@ -46,7 +49,7 @@ body {
 
 .hire {
   display: inline-block;
-  margin: 20px 8% 20px 0;
+  margin: 25px 8% 25px 0;
   float: right;
 }
 
@@ -68,6 +71,8 @@ body {
   padding-left: 16%;
   display: table;
   width: 100%;
+  height: 100vh;
+  margin-top: -70px;
 }
 
 .slogan {

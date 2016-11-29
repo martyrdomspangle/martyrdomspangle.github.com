@@ -1,18 +1,18 @@
 const setSize = function () {
     const headerHeight = parseFloat($('.header').css('height'));
-    $('.header-section').css('height', $(window).height() - headerHeight);
+    //$('.header-section').css('height', $(window).height() - headerHeight);
 };
 
 $(document).ready(function () {
-    setSize();
+    //setSize();
     const headerHeight = parseFloat($('.header').css('height'));
 
     //Header
-    var headerSize = $('header').outerHeight();
-    var scrolled;
-    var scrollPosition = 0;
-    var pixelsToScroll = 10;
-    var timeStamp = 150;
+    const headerSize = $('header').outerHeight();
+    let scrolled;
+    let scrollPosition = 0;
+    const pixelsToScroll = 10;
+    const timeStamp = 150;
 
     var changePosition = function () {
         var st = $(this).scrollTop();
