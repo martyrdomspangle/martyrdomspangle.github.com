@@ -1,12 +1,4 @@
-const setSize = function () {
-    const headerHeight = parseFloat($('.header').css('height'));
-    //$('.header-section').css('height', $(window).height() - headerHeight);
-};
-
 $(document).ready(function () {
-    //setSize();
-    const headerHeight = parseFloat($('.header').css('height'));
-
     //Header
     const headerSize = $('header').outerHeight();
     let scrolled;
@@ -38,8 +30,4 @@ $(document).ready(function () {
         }
     }, timeStamp);
     //Header
-});
-
-$(window).resize(function () {
-    setSize();
 });
