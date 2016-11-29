@@ -1,8 +1,21 @@
+body {
+	font-family: franklin-gothic-demi !important;
+  padding-top: 70px;
+  margin:0;
+  height:100vh;
+  width:100vw;
+}
 .header {
   background-color: white;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  transition: top 0.3s ease-out;
   width: 100%;
 }
-
+.scroll-up {
+    top: -70px;
+}
 .header-menu {
   list-style-type: none;
   display: inline-block;
@@ -15,7 +28,7 @@
   font-weight: 600;
   font-size: 11pt;
   display: inline-block;
-  margin: 20px;
+  margin: 25px;
 }
 
 .header-menu li:first-child {
@@ -36,7 +49,7 @@
 
 .hire {
   display: inline-block;
-  margin: 20px 8% 20px 0;
+  margin: 25px 8% 25px 0;
   float: right;
 }
 
@@ -58,6 +71,8 @@
   padding-left: 16%;
   display: table;
   width: 100%;
+  height: 100vh;
+  margin-top: -70px;
 }
 
 .slogan {
