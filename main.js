@@ -1,33 +1,19 @@
 $(document).ready(function () {
-    //Header
-    const headerSize = $('header').outerHeight();
-    let scrolled;
-    let scrollPosition = 0;
-    const pixelsToScroll = 10;
-    const timeStamp = 150;
+  Promise.all($('header.menu a').map((_, anchor) => {
+    const pageName = $(anchor).attr('href').substring(1);
 
-    var changePosition = function () {
-        var st = $(this).scrollTop();
-        if (Math.abs(scrollPosition - st) <= pixelsToScroll)
-            return;
-        if (st > scrollPosition && st > headerSize) {
-            $('header').removeClass('scroll-down').addClass('scroll-up');
-        } else {
-            if (st + $(window).height() < $(document).height()) {
-                $('header').removeClass('scroll-up').addClass('scroll-down');
-            }
-        }
-        scrollPosition = st;
-    }
-    $(window).scroll(function (event) {
-        scrolled = true;
-    });
+    return $.get(`/pages/${pageName}.html`).then(html => $('.stripe').append(html));
+  })).then((...htmls) => htmls.forEach(html =>
+    $('.stripe').append(html)
+  ));
 
-    setInterval(function () {
-        if (scrolled) {
-            changePosition();
-            scrolled = false;
-        }
-    }, timeStamp);
-    //Header
+  location.hash = location.hash || 'home';
+  $.get(`/pages/${location.hash.substring(1)}.html`).then(html => $('.wrapper').append(html));
+
+  $('header.menu a').click(function(e) {
+    const page = $(this).attr('href').substring(1);
+
+    $('.wrapper').html('');
+    $.get(`/pages/${page}.html`).then(html => $('.wrapper').append(html));
+  });
 });
