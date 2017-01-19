@@ -1,8 +1,8 @@
 body {
   font-family: 'Libre Franklin', sans-serif !important;
-  margin:0;
-  height:100vh;
-  width:100vw;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
   position: absolute;
   background: url('/img/bgr_main.png') fixed !important;
 }
@@ -29,9 +29,9 @@ header.main {
   z-index: 500;
 }
 
-.header-container{
+.header-container {
   position: relative;
-  width : 90%;
+  width: 90%;
   min-height: 100px;
   padding-right: 15px;
   padding-left: 15px;
@@ -39,17 +39,17 @@ header.main {
   margin-left: auto;
 }
 
-.logo{
+.logo {
   height: 100px;
   margin-right: 0;
   margin-left: 0;
   padding-top: 25px;
   padding-bottom: 25px;
-  float:left;
+  float: left;
 }
 
 .social-icons {
-  position : absolute;
+  position: absolute;
   top: 40px;
   right: 15px;
   list-style: none;
@@ -57,15 +57,15 @@ header.main {
 }
 
 .social-icons > li {
-    float: left;
+  float: left;
 }
 
 .social-icons > li:last-child i {
-    padding-right: 0;
+  padding-right: 0;
 }
 
 .social-icons i {
-    padding: 0 4px;
+  padding: 0 4px;
 }
 
 .icon-vk:before {
@@ -88,13 +88,12 @@ header.menu {
   position: relative;
 }
 
-.menu-active-tab{
-  background-image: url(/img/bgr_nav_selected.png);
-  background-repeat: no-repeat;
+.menu-active-tab {
+  background: url(/img/bgr_nav_selected.png) no-repeat;
 }
 
 section.wrapper {
-  position:relative;
+  position: relative;
   height: 100%;
   padding-left: 360px;
 }
@@ -128,6 +127,7 @@ header.menu ul li p:first-child {
 
 .page-home .slogan {
   font-size: 70px;
+  font-weight: bold;
   color: rgb(237, 103, 58);
 }
 
@@ -144,6 +144,17 @@ header.menu ul li p:first-child {
   width: 25%;
   margin-left: -3px;
   margin-bottom: -5px;
+  padding-left: 64px;
+  background-repeat: no-repeat !important;
+}
+
+.page-home ul.labels li h2 {
+  font-size: 16pt;
+  color: white;
+}
+
+.page-home ul.labels li p {
+  color: lightgray;
 }
 
 @media (max-width: 1320px) {
