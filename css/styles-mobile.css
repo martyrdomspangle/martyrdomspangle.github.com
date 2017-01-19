@@ -22,3 +22,7 @@ section.stripe {
 .page-home ul.labels li {
   width: 100%;
 }
+
+.social-icons {
+  display: none;
+}
