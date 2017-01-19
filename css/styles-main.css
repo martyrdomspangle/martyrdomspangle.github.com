@@ -25,7 +25,7 @@ body {
   margin-right: auto;
   position: relative;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-55%);
 }
 
 header.main {
@@ -164,6 +164,23 @@ header.menu ul li p:first-child {
 
 .page-home ul.labels li p {
   color: lightgray;
+}
+
+.btn-control-group {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding: 0;
+  color: white;
+  font-weight: bold;
+}
+
+.btn-control-group li {
+  padding: 16px;
+  min-width: 200px;
+  text-align: center;
+  background: rgb(237, 103, 58);
+  border-radius: 0;
+  margin-right: 20px;
 }
 
 @media (max-width: 1320px) {
