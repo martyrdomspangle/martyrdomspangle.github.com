@@ -1,11 +1,27 @@
+@font-face {
+  font-family: ProximaNova;
+  src: url("/fonts/proxima_regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: ProximaNova;
+  font-weight: bold;
+  src: url("/fonts/proxima_bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: PeaceSans;
+  src: url("/fonts/peace_sans.otf") format("opentype");
+}
+
 body {
-  font-family: 'Libre Franklin', sans-serif !important;
+  font-family: ProximaNova, sans-serif !important;
   margin: 0;
   height: 100vh;
   width: 100vw;
   position: absolute;
-  background: url('/img/bgr_main.png') !important;
-  background-size: 100% auto !important;
+  background: url('/img/bgr_main.png') no-repeat fixed !important;
+  background-size: cover !important;
 }
 
 .bgr-layer {
@@ -135,10 +151,30 @@ header.menu ul li p:first-child {
   font-weight: 900;
 }
 
-.page-home .slogan {
-  font-size: 70px;
-  font-weight: bold;
+header.menu h3 {
+  font-family: PeaceSans, sans-serif;
+  color: white;
+}
+
+header.menu a {
+  text-decoration: none;
+  color: lightgray;
+}
+
+
+.page h1 {
+  font-family: PeaceSans, sans-serif;
   color: rgb(237, 103, 58);
+  font-size: 56pt;
+}
+
+.page h3 {
+  font-family: PeaceSans, sans-serif;
+  color: white;
+}
+
+.page-home .slogan {
+  max-width: 800px;
 }
 
 .page-home ul.labels {
