@@ -218,6 +218,15 @@ header.menu a:hover {
   margin-right: 20px;
 }
 
+.page .btn-secondary {
+  background: gray !important;
+}
+
+.page .btn {
+  font-family: PeaceSans, sans-serif;
+  font-weight: bold;
+}
+
 @media (max-width: 1320px) {
   .page-home ul.labels {
     width: 90%;
