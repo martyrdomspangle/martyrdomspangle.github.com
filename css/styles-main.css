@@ -57,27 +57,30 @@ header.main {
 
 .header-container {
   position: relative;
-  width: 90%;
   min-height: 100px;
-  padding-right: 15px;
-  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
 }
 
 .logo {
   height: 100px;
+  width: 25%;
   margin-right: 0;
   margin-left: 0;
   padding-top: 25px;
   padding-bottom: 25px;
   float: left;
+  text-align: center;
 }
 
 .social-icons {
+  width: 25%;
   position: absolute;
   top: 40px;
-  right: 15px;
+  right: 0;
+  display: flex;
+  padding: 0;
+  justify-content: center;
   list-style: none;
 }
 
@@ -109,7 +112,7 @@ header.main {
 header.menu {
   height: 100%;
   float: left;
-  width: 360px;
+  width: 25%;
   z-index: 1000;
   position: relative;
 }
@@ -117,7 +120,7 @@ header.menu {
 section.wrapper {
   position: relative;
   height: 100%;
-  padding-left: 360px;
+  padding-left: 25%;
 }
 
 section.stripe {
