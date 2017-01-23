@@ -24,6 +24,11 @@ body {
   background-size: cover !important;
 }
 
+p {
+  color: #9998a5;
+  font-size: 12pt;
+}
+
 .bgr-layer {
   content: '';
   position: absolute;
@@ -155,7 +160,6 @@ header.menu a {
   height: 115px;
   padding: 0.1em 80px 0.5em 2em;
   text-decoration: none;
-  color: lightgray;
 }
 
 header.menu a:hover {
@@ -166,12 +170,13 @@ header.menu a:hover {
 .page h1 {
   font-family: PeaceSans, sans-serif;
   color: rgb(237, 103, 58);
-  font-size: 56pt;
+  font-size: 64pt;
 }
 
 .page h3 {
   font-family: PeaceSans, sans-serif;
   color: white;
+  font-size: 14pt;
 }
 
 .page-home .slogan {
@@ -182,7 +187,7 @@ header.menu a:hover {
   width: 960px;
   list-style-type: none;
   padding: 0;
-  margin: 0;
+  margin: 50px 0 70px 0;
 }
 
 .page-home ul.labels li {
@@ -198,10 +203,6 @@ header.menu a:hover {
 .page-home ul.labels li h2 {
   font-size: 16pt;
   color: white;
-}
-
-.page-home ul.labels li p {
-  color: lightgray;
 }
 
 .btn-control-group {
@@ -222,12 +223,12 @@ header.menu a:hover {
 }
 
 .page .btn-secondary {
-  background: gray !important;
+  background: rgba(255, 255, 255, 0.2) !important;
 }
 
 .page .btn {
   font-family: PeaceSans, sans-serif;
-  font-weight: bold;
+  font-size: 14pt;
 }
 
 @media (max-width: 1320px) {

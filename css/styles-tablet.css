@@ -28,7 +28,7 @@ header.menu ul li {
 }
 
 
-header.menu ul li p + p {
+header.menu ul li p {
   display: none;
 }
 
