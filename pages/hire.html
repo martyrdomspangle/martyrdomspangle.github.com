@@ -60,26 +60,58 @@
 
     }
 
+    .validation-error-text{
+    	position: absolute;
+    	font-size: 14pt;
+    	color: rgb(237, 103, 58);
+    	margin: 10px 0 0;
+    }
+
 </style>
 <section class="page page-hire-us">
 <p class="orange-text">Start you project</p>
 <p class="white-text">right now!</p>
 <div class="form-container">
-   <form class="project-form">
+   <form class="project-form" onsubmit="submitValidation(this)" >
       <div class="input-container">
-         <input type="email">
+         <input type="text" id="email-input">
          <label>E-mail</label>
-         <span style="display:none">Error placeholder</span>
       </div>
       <div class="input-container">
-         <input type="text">
+         <input type="text" id="about-project-input">
          <label>A few lines about your project</label>
-         <span style="display:none">Error placeholder</span>
       </div>
+      <div class="buttons-container">
       <button type="submit">Submit</button>
+      <button type="button">Estimate costs</button>
+      </div>
    </form>
 </div>
 <script type="text/javascript">
+function submitValidation(form){
+	var emailData = form['email-input'].value;
+	var emailPattern = new RegExp(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
+	if(!emailPattern.test(emailData)){
+		var errorElement = document.createElement('span');
+		errorElement.className = 'validation-error-text';
+		errorElement.innerHTML = 'You have entered an invalid email address';
+		form['email-input'].parentNode.appendChild(errorElement);
+		return false;
+	}
+	var projectData = form['about-project-input'].value;
+	if(!projectData){
+		var errorElement = document.createElement('span');
+		errorElement.className = 'validation-error-text';
+		errorElement.innerHTML = 'Please tell us something about your project!';
+		form['about-project-input'].parentNode.appendChild(errorElement);
+		return false;
+	}
+	var errorNodeList = document.getElementsByClassName('validation-error-text');
+    while(errorNodeList.length > 0){
+        errorNodeList[0].parentNode.removeChild(errorNodeList[0]);
+    }
+	return true;
+}
    $(document).ready(function() {
     $('.project-form .input-container input').focusout(function() {
         var value = $(this).val();
