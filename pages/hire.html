@@ -1,3 +1,94 @@
-<section class="page page-about-us">
-  Hire
+<style type="text/css">
+
+    .page-hire-us p {
+	text-transform: uppercase;
+	font-size: 30px;
+	font-family: PeaceSans, sans-serif;
+    color: rgb(237, 103, 58);
+    }
+
+    .form-container {
+        width: 470px;
+    }
+
+    input {
+        color: #21a1e1;
+        padding: 0;
+        font-size: 16pt;
+        display: inline-block;
+    }
+
+    .input-container {
+        width: 100%;
+        display: block;
+        margin: 50px auto;
+        margin-right: 20px;
+        position: relative;
+    }
+    .input-container input {
+    	background: rgba(255, 255, 255, 0);
+    	border: none;
+        border-bottom: solid 2px rgb(137, 137, 137);
+        outline:none;
+        width: 100%;
+        padding: 0;
+        color: rgb(255, 255, 255);
+    }
+    .input-container label {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        font-size: 16pt;
+        color: rgb(255, 255, 255);
+        pointer-events: none;
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    .input-container input:focus,
+    .input-container input.has-value{
+        border-bottom: 2px solid rgb(237, 103, 58);
+    }
+
+    .input-container input:focus + label,
+    .input-container input.has-value + label {
+        top: -10px;
+        font-size: 12pt;
+        color: rgb(115, 108, 124);
+
+    }
+
+</style>
+<section class="page page-hire-us">
+<p class="orange-text">Start you project</p>
+<p class="white-text">right now!</p>
+<div class="form-container">
+   <form class="project-form">
+      <div class="input-container">
+         <input type="email">
+         <label>E-mail</label>
+         <span style="display:none">Error placeholder</span>
+      </div>
+      <div class="input-container">
+         <input type="text">
+         <label>A few lines about your project</label>
+         <span style="display:none">Error placeholder</span>
+      </div>
+      <button type="submit">Submit</button>
+   </form>
+</div>
+<script type="text/javascript">
+   $(document).ready(function() {
+    $('.project-form .input-container input').focusout(function() {
+        var value = $(this).val();
+        if (!value) {
+            $(this).removeClass('has-value');
+        } else {
+            $(this).addClass('has-value');
+        }
+    });
+});
+</script>
 </section>
