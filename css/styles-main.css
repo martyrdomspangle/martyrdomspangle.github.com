@@ -20,7 +20,7 @@ body {
   height: 100vh;
   width: 100vw;
   position: absolute;
-  background: url('/img/bgr_main.png') no-repeat fixed !important;
+  background: url('/img/bgr_main.jpg') no-repeat fixed !important;
   background-size: cover !important;
 }
 
