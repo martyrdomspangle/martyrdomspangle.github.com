@@ -19,10 +19,10 @@ section.stripe {
   width: 70%;
 }
 
-.page-home ul.labels li {
+.responsive-ul > li {
   width: 100%;
 }
 
-.social-icons {
+.mobile-hidden {
   display: none;
 }

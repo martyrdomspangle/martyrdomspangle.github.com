@@ -36,6 +36,7 @@ header.menu ul li p {
   width: 70%;
 }
 
-.page-home ul.labels li {
+.responsive-ul > li {
   width: 50%;
 }
+
