@@ -91,7 +91,7 @@
   function submitValidation(form) {
     var formCorrect = true;
     var emailData = form['email-input'].value;
-    var emailPattern = new RegExp(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
+    var emailPattern = new RegExp(/^[-!#$%&'*+\/0-9=?A-Z^_a-z{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-?\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/);
     var parent = form['email-input'].parentNode;
     if (!emailPattern.test(emailData)) {
       if (!elementHasClass(parent, 'input-error')) {
