@@ -88,73 +88,73 @@
    </form>
 </div>
 <script type="text/javascript">
-function submitValidation(form) {
-            var formCorrect = true;
-            var emailData = form['email-input'].value;
-            var emailPattern = new RegExp(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
-            var parent = form['email-input'].parentNode;
-            if (!emailPattern.test(emailData)) {
-                if (!elementHasClass(parent, 'input-error')) {
-                    var errorElement = document.createElement('span');
-                    errorElement.className = 'validation-error-text';
-                    errorElement.innerHTML = 'You have entered an invalid email address';
-                    form['email-input'].parentNode.appendChild(errorElement);
-                }
-                formCorrect = false;
-                elementAddClass(parent, 'input-error')
-            } else if (elementHasClass(parent, 'input-error')) {
-                removeClass(parent, 'input-error');
-                var errorElement = parent.lastElementChild;
-                parent.removeChild(errorElement);
-            }
-            var projectData = form['about-project-input'].value;
-            parent = form['about-project-input'].parentNode;
-            if (!projectData) {
-                if (!elementHasClass(parent, 'input-error')) {
-                    var errorElement = document.createElement('span');
-                    errorElement.className = 'validation-error-text';
-                    errorElement.innerHTML = 'Please tell us something about your project!';
-                    form['about-project-input'].parentNode.appendChild(errorElement);
-                }
-                formCorrect = false;
-                elementAddClass(parent, 'input-error');
-            } else if (elementHasClass(parent, 'input-error')) {
-                removeClass(parent, 'input-error');
-                var errorElement = parent.lastElementChild;
-                parent.removeChild(errorElement);
-            }
-            if(formCorrect) console.log('everything fine form will be submitted');
-            return formCorrect;
-        }
+  function submitValidation(form) {
+    var formCorrect = true;
+    var emailData = form['email-input'].value;
+    var emailPattern = new RegExp(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
+    var parent = form['email-input'].parentNode;
+    if (!emailPattern.test(emailData)) {
+      if (!elementHasClass(parent, 'input-error')) {
+        var errorElement = document.createElement('span');
+        errorElement.className = 'validation-error-text';
+        errorElement.innerHTML = 'You have entered an invalid email address';
+        form['email-input'].parentNode.appendChild(errorElement);
+      }
+      formCorrect = false;
+      elementAddClass(parent, 'input-error')
+    } else if (elementHasClass(parent, 'input-error')) {
+      removeClass(parent, 'input-error');
+      var errorElement = parent.lastElementChild;
+      parent.removeChild(errorElement);
+    }
+    var projectData = form['about-project-input'].value;
+    parent = form['about-project-input'].parentNode;
+    if (!projectData) {
+      if (!elementHasClass(parent, 'input-error')) {
+        var errorElement = document.createElement('span');
+        errorElement.className = 'validation-error-text';
+        errorElement.innerHTML = 'Please tell us something about your project!';
+        form['about-project-input'].parentNode.appendChild(errorElement);
+      }
+      formCorrect = false;
+      elementAddClass(parent, 'input-error');
+    } else if (elementHasClass(parent, 'input-error')) {
+      removeClass(parent, 'input-error');
+      var errorElement = parent.lastElementChild;
+      parent.removeChild(errorElement);
+    }
+    if(formCorrect) console.log('everything fine form will be submitted');
+    return formCorrect;
+  }
 
-        function elementHasClass(el, className) {
-            if (el.classList)
-                return el.classList.contains(className);
-            else
-                return new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className);
-        };
-        function removeClass(el, className) {
-            if (el.classList)
-                el.classList.remove(className);
-            else
-                el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
-        };
-        function elementAddClass(el, className) {
-            if (el.classList)
-                el.classList.add(className);
-            else
-                el.className += ' ' + className;
-        };
+  function elementHasClass(el, className) {
+    if (el.classList)
+      return el.classList.contains(className);
+    else
+      return new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className);
+  };
+  function removeClass(el, className) {
+    if (el.classList)
+      el.classList.remove(className);
+    else
+      el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+  };
+  function elementAddClass(el, className) {
+    if (el.classList)
+      el.classList.add(className);
+    else
+      el.className += ' ' + className;
+  };
 
-   $(document).ready(function() {
+  $(document).ready(function() {
     $('.project-form .input-container input').focusout(function() {
-        var value = $(this).val();
-        if (!value) {
-            $(this).removeClass('has-value');
-        } else {
-            $(this).addClass('has-value');
-        }
+      var value = $(this).val();
+      if (!value) {
+        $(this).removeClass('has-value');
+      } else {
+        $(this).addClass('has-value');
+      }
     });
-});
+  });
 </script>
 </section>
