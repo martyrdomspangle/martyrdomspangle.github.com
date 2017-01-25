@@ -239,6 +239,18 @@ header.menu a:hover {
   font-size: 14pt;
 }
 
+.btn-secondary button {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.btn button {
+  background: none;
+  border: none;
+  outline: none;
+}
+
 @media (max-width: 1320px) {
   .page-home ul.labels {
     width: 90%;

@@ -1,10 +1,18 @@
 <style type="text/css">
 
+  .page-hire-us {
+    padding: 10% 10% 0;
+  }
+
   .page-hire-us p {
    text-transform: uppercase;
    font-size: 30px;
    font-family: PeaceSans, sans-serif;
    color: rgb(237, 103, 58);
+ }
+
+ .white-text {
+  color: rgb(255, 255, 255);
  }
 
  .form-container {
@@ -17,7 +25,7 @@ input, textarea {
   font-size: 16pt;
   display: inline-block;
 }
-textarea{
+textarea {
   overflow: hidden;
   word-wrap: break-word;
   resize: none;
@@ -79,7 +87,7 @@ textarea{
 </style>
 <section class="page page-hire-us">
 <p class="orange-text">Start you project</p>
-<p class="white-text">right now!</p>
+<p><span class="white-text">right now!</span></p>
 <div class="form-container">
    <form class="project-form" onsubmit="submitValidation(this)" >
       <div class="input-container">
@@ -90,10 +98,10 @@ textarea{
       <textarea rows="1" id="about-project-input"></textarea>
       <label>A few lines about your project</label>
       </div>
-      <div class="buttons-container">
-      <button type="submit">Submit</button>
-      <button type="button">Estimate costs</button>
-      </div>
+      <ul class="btn-control-group">
+      <li class="btn"><button type="submit">Submit</button></li>
+      <li class="btn btn-secondary"><button type="button">Estimate costs</button></li>
+      </ul>
    </form>
 </div>
 <script type="text/javascript">
