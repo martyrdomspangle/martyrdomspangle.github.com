@@ -203,7 +203,8 @@ header.menu a:hover {
 }
 
 .responsive-ul > li {
-  display: inline-block;
+  display: inline-table;
+  table-layout: fixed;
   width: 25%;
 }
 
