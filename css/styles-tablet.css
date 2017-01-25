@@ -28,7 +28,7 @@ header.menu ul li {
 }
 
 
-header.menu ul li p + p {
+header.menu ul li p {
   display: none;
 }
 
@@ -36,6 +36,7 @@ header.menu ul li p + p {
   width: 70%;
 }
 
-.page-home ul.labels li {
+.responsive-ul > li {
   width: 50%;
 }
+

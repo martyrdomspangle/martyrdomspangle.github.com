@@ -1,3 +1,174 @@
-<section class="page page-about-us">
-  Hire
+<style type="text/css">
+
+  .page-hire-us {
+    padding: 10% 10% 0;
+  }
+
+  .page-hire-us p {
+   text-transform: uppercase;
+   font-size: 30px;
+   font-family: PeaceSans, sans-serif;
+   color: rgb(237, 103, 58);
+ }
+
+ .white-text {
+  color: rgb(255, 255, 255);
+ }
+
+ .form-container {
+  width: 470px;
+}
+
+input, textarea {
+  color: #21a1e1;
+  padding: 0;
+  font-size: 16pt;
+  display: inline-block;
+}
+textarea {
+  overflow: hidden;
+  word-wrap: break-word;
+  resize: none;
+}
+
+.input-container {
+  width: 100%;
+  display: block;
+  margin: 50px auto;
+  margin-right: 20px;
+  position: relative;
+}
+.input-container input, textarea {
+ background: rgba(255, 255, 255, 0);
+ border: none;
+ border-bottom: solid 2px rgb(137, 137, 137);
+ outline:none;
+ width: 100%;
+ padding: 0;
+ color: rgb(255, 255, 255);
+}
+.input-container label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  font-size: 16pt;
+  color: rgb(255, 255, 255);
+  pointer-events: none;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.input-container textarea + label {
+  top: 42%;
+}
+
+.input-container input:focus,
+.input-container input.has-value,
+.input-container textarea:focus,
+.input-container textarea.has-value{
+  border-bottom: 2px solid rgb(237, 103, 58);
+}
+
+.input-container input:focus + label,
+.input-container input.has-value + label,
+.input-container textarea:focus + label,
+.input-container textarea.has-value + label {
+  top: -10px;
+  font-size: 12pt;
+  color: rgb(115, 108, 124);
+
+}
+
+.validation-error-text{
+ position: absolute;
+ font-size: 14pt;
+ color: rgb(237, 103, 58);
+ margin: 10px 0 0;
+}
+
+</style>
+<section class="page page-hire-us">
+<p class="orange-text">Start you project</p>
+<p><span class="white-text">right now!</span></p>
+<div class="form-container">
+   <form class="project-form" onsubmit="submitValidation(this)" >
+      <div class="input-container">
+         <input type="text" id="email-input">
+         <label>E-mail</label>
+      </div>
+      <div class="input-container">
+      <textarea rows="1" id="about-project-input"></textarea>
+      <label>A few lines about your project</label>
+      </div>
+      <ul class="btn-control-group">
+      <li class="btn"><button type="submit">Submit</button></li>
+      <li class="btn btn-secondary"><button type="button">Estimate costs</button></li>
+      </ul>
+   </form>
+</div>
+<script type="text/javascript">
+  function submitValidation(form) {
+    var formCorrect = true;
+    var emailData = form['email-input'].value;
+    var emailPattern = new RegExp(/^[-!#$%&'*+\/0-9=?A-Z^_a-z{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-?\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/);
+    var parent = form['email-input'].parentNode;
+    if (!emailPattern.test(emailData)) {
+      if (!elementHasClass(parent, 'input-error')) {
+        var errorElement = document.createElement('span');
+        errorElement.className = 'validation-error-text';
+        errorElement.innerHTML = 'You have entered an invalid email address';
+        form['email-input'].parentNode.appendChild(errorElement);
+      }
+      formCorrect = false;
+      elementAddClass(parent, 'input-error')
+    } else if (elementHasClass(parent, 'input-error')) {
+      removeClass(parent, 'input-error');
+      var errorElement = parent.lastElementChild;
+      parent.removeChild(errorElement);
+    }
+    if(formCorrect) console.log('everything fine form will be submitted');
+    return formCorrect;
+  }
+
+  function elementHasClass(el, className) {
+    if (el.classList)
+      return el.classList.contains(className);
+    else
+      return new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className);
+  };
+  function removeClass(el, className) {
+    console.log('calling all systems 13');
+    if (el.classList)
+      el.classList.remove(className);
+    else
+      el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+  };
+  function elementAddClass(el, className) {
+    if (el.classList)
+      el.classList.add(className);
+    else
+      el.className += ' ' + className;
+  };
+
+  $(document).ready(function() {
+    $('#email-input').on('input', function(){
+      var currentInput = $(this);
+      if(currentInput.parent().hasClass('input-error')){
+        currentInput.parent().removeClass('input-error');
+        currentInput.siblings('span').remove();
+      }
+    });
+    autosize(document.getElementById('about-project-input'));
+    $('.project-form .input-container input, .project-form .input-container textarea ').focusout(function() {
+      var value = $(this).val();
+      if (!value) {
+        $(this).removeClass('has-value');
+      } else {
+        $(this).addClass('has-value');
+      }
+    });
+  });
+</script>
 </section>

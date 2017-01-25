@@ -20,8 +20,13 @@ body {
   height: 100vh;
   width: 100vw;
   position: absolute;
-  background: url('/img/bgr_main.png') no-repeat fixed !important;
+  background: url('/img/bgr_main.jpg') no-repeat fixed !important;
   background-size: cover !important;
+}
+
+p {
+  color: #9998a5;
+  font-size: 12pt;
 }
 
 .bgr-layer {
@@ -57,33 +62,39 @@ header.main {
 
 .header-container {
   position: relative;
-  width: 90%;
   min-height: 100px;
-  padding-right: 15px;
-  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
 }
 
 .logo {
   height: 100px;
+  width: 25%;
   margin-right: 0;
   margin-left: 0;
   padding-top: 25px;
   padding-bottom: 25px;
   float: left;
+  text-align: center;
+}
+
+.header-container .social-icons {
+  width: 25%;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .social-icons {
-  position: absolute;
-  top: 40px;
-  right: 15px;
+  padding: 0;
   list-style: none;
 }
 
 .social-icons > li {
   float: left;
-  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .social-icons > li:last-child i {
@@ -109,7 +120,7 @@ header.main {
 header.menu {
   height: 100%;
   float: left;
-  width: 360px;
+  width: 25%;
   z-index: 1000;
   position: relative;
 }
@@ -117,7 +128,9 @@ header.menu {
 section.wrapper {
   position: relative;
   height: 100%;
-  padding-left: 360px;
+  width: 75%;
+  padding: 0 5% 0 0;
+  display: inline-block;
 }
 
 section.stripe {
@@ -152,23 +165,22 @@ header.menu a {
   height: 115px;
   padding: 0.1em 80px 0.5em 2em;
   text-decoration: none;
-  color: lightgray;
 }
 
 header.menu a:hover {
   background: url(/img/bgr_nav_selected.png) no-repeat;
 }
 
-
 .page h1 {
   font-family: PeaceSans, sans-serif;
   color: rgb(237, 103, 58);
-  font-size: 56pt;
+  font-size: 64pt;
 }
 
 .page h3 {
   font-family: PeaceSans, sans-serif;
   color: white;
+  font-size: 14pt;
 }
 
 .page-home .slogan {
@@ -179,26 +191,26 @@ header.menu a:hover {
   width: 960px;
   list-style-type: none;
   padding: 0;
-  margin: 0;
+  margin: 50px 0 70px 0;
 }
 
 .page-home ul.labels li {
   height: 100px;
-  display: inline-block;
-  width: 25%;
   margin-left: -3px;
   margin-bottom: -5px;
   padding-left: 64px;
   background-repeat: no-repeat !important;
 }
 
+.responsive-ul > li {
+  display: inline-table;
+  table-layout: fixed;
+  width: 25%;
+}
+
 .page-home ul.labels li h2 {
   font-size: 16pt;
   color: white;
-}
-
-.page-home ul.labels li p {
-  color: lightgray;
 }
 
 .btn-control-group {
@@ -219,12 +231,24 @@ header.menu a:hover {
 }
 
 .page .btn-secondary {
-  background: gray !important;
+  background: rgba(255, 255, 255, 0.2) !important;
 }
 
 .page .btn {
   font-family: PeaceSans, sans-serif;
-  font-weight: bold;
+  font-size: 14pt;
+}
+
+.btn-secondary button {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.btn button {
+  background: none;
+  border: none;
+  outline: none;
 }
 
 @media (max-width: 1320px) {
