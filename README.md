@@ -1,5 +1,11 @@
 # Landing page
 
+## MVP requirements
+Correct layout and style in:
+* Chrome desktop last version
+* Chrome android/ios last version
+* Safari ios last version
+
 ## Minimum browser support version requirements
 | Browser  | Version  |
 |---|---|
