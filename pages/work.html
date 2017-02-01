@@ -184,7 +184,7 @@
   </div>
 </div>
 
-/* end owl*/ 
+
 </div>
 <div class="navigation">
   <div class="pagination-arrow-left previous-arrow">Previous</div>
@@ -195,18 +195,61 @@
   function swapImages() {
     console.log('here');
     var $active = $('#inside').children('.active-img');
-    console.log($active);
     var $next = $active.next();
     if($next.length === 0) {
       $next = $('#inside').children(':first');
-      console.log('lol');
     }
     $active.removeClass('active-img')
     $next.addClass('active-img')
   };
 
+  function createProject(project){
+    var template = '<div class="project-wrapper">'+
+      '<div class="app-wrapper">'+
+        '<div class="work-iphone">'+
+          '<img src="img/ph_phone.png">'+
+        '</div>'+
+        '<div id="inside">'+
+          '<img class="app-img active-img" src="./img/apps/clashot/q1_en.png">'+
+          '<img class="app-img" src="./img/apps/clashot/q2_en.png">'+
+          '<img class="app-img" src="./img/apps/clashot/q3_en.png">'+
+        '</div>'+
+      '</div>'+
+      '<div class="description-wrapper">'+
+       '<div app>'+
+         '<h1 class="app-title">' + project.title + '</h1>'+
+         '<p class="app-description">'+
+           project.description +
+         '</p>'+
+         '<ul class="labels app-description">'+
+          '<li>'+
+            '<img src="/img/ic_hours.png">'+
+            '<p>156 <sup>hours</sup></p>'+
+          '</li>'+
+          '<li>'+
+            '<img src="/img/ic_cups.png">'+
+            '<p>215 <sup>cups</sup></p>'+
+          '</li>'+
+          '<li>'+
+            '<img src="/img/ic_code.png">'+
+            '<p>2155 <sup>strings</sup></p>'+
+          '</li>'+
+        '</ul>'+
+        '<ul class="btn-control-group">'+
+          '<li class="btn btn-secondary">Appstore</li>'+
+          '<li class="btn btn-secondary">Playmarket</li>'+
+        '</ul>'+
+      '</div>'+
+    '</div>'+
+  '</div>';
+  return template;
+  };
+
   $(document).ready(function(){     
     setInterval(swapImages, 6e2);
+
+    var project = createProject({title: 'Rebus', description : 'We love mind games, stylish graphics, and crisp insanity. This application is for such freaks as we are.' });
+
     //carousel initialization
     $('.owl-carousel').owlCarousel({
       items: 1,
@@ -214,6 +257,8 @@
       mouseDrag: false,
       nav: false
     });
+
+    $('.owl-carousel').owlCarousel('add', project).owlCarousel('refresh');
 
     $(".previous-arrow").click(function () {
       $('.owl-carousel').owlCarousel().trigger('prev.owl.carousel');
