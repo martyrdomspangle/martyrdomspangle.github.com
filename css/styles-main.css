@@ -83,8 +83,7 @@ header.main {
   position: absolute;
   top: 40px;
   right: 0;
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
 
 .social-icons {
@@ -93,7 +92,7 @@ header.main {
 }
 
 .social-icons > li {
-  float: left;
+  display: inline-table;
   margin-right: 15px;
 }
 
@@ -203,6 +202,12 @@ header.menu a:hover {
 }
 
 .responsive-ul > li {
+  display: inline-block;
+  table-layout: fixed;
+  width: 25%;
+}
+
+.grid > li {
   display: inline-table;
   table-layout: fixed;
   width: 25%;

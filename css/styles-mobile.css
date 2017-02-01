@@ -23,6 +23,10 @@ section.stripe {
   width: 100%;
 }
 
+.grid > li {
+  width: 50%;
+}
+
 .mobile-hidden {
   display: none;
 }
