@@ -1,8 +1,8 @@
-<link rel="stylesheet" href="./scripts/OwlCarousel2-2.2.0/assets/owl.carousel.min.css" />
 <style type="text/css">
   /* Start our work*/
   .page-our-work {
     position:relative;
+    padding: 0 0px;
   }
 
   .app-wrapper {
@@ -66,59 +66,163 @@
     display:inline-block;
   }
 
+  .pagination-arrow-left{
+    cursor: pointer;
+    margin-top: -20px;
+    overflow: hidden;
+    position: absolute;
+    text-indent: -9999em;
+    top: 50%;
+    left: -25px;
+    z-index:1000;
+  }
+
+  .pagination-arrow-right {
+    cursor: pointer;
+    margin-top: -20px;
+    overflow: hidden;
+    pointer-events: auto;
+    position: absolute;
+    text-indent: -9999em;
+    top: 50%;
+    right: -25px;
+    z-index:1000;
+  }
+
+  .previous-arrow {
+    background-image: url(./img/arrows_sprites.png);
+    background-repeat: no-repeat;
+    background-position: -0px -2px; width: 22px; height:34px;
+  }
+
+  .next-arrow {
+    background-image: url(./img/arrows_sprites.png);
+    background-repeat: no-repeat;
+    background-position: -0px -40px; width: 22px; height:34px;
+  }
+
   /*End our work*/
 </style>
 <section class="page page-our-work">
-  <div class="app-wrapper">
-    <div class="work-iphone">
-      <img src="img/ph_phone.png">
-    </div>
-    <div id="inside">
-      <img class="app-img active-img" src="./img/apps/clashot/q1_en.png">
-      <img class="app-img" src="./img/apps/clashot/q2_en.png">
-      <img class="app-img" src="./img/apps/clashot/q3_en.png">
+  <div class="owl-carousel">
+
+    <div class="project-wrapper">
+      <div class="app-wrapper">
+        <div class="work-iphone">
+          <img src="img/ph_phone.png">
+        </div>
+        <div id="inside">
+          <img class="app-img active-img" src="./img/apps/clashot/q1_en.png">
+          <img class="app-img" src="./img/apps/clashot/q2_en.png">
+          <img class="app-img" src="./img/apps/clashot/q3_en.png">
+        </div>
+      </div>
+      <div class="description-wrapper">
+       <div app>
+         <h1 class="app-title">Clashot</h1>
+         <p class="app-description">
+           Clashot is a photobank in your pocket, that helps you to earn money by taking photos and selling them online. No need to agonize over looking for subjects and objects for your photos: in this app, you can always look at what your friends and other Clashot users are shooting, as well as look through photos deemed the best and most popular.
+         </p>
+         <ul class="labels app-description">
+          <li>
+            <img src="/img/ic_hours.png">
+            <p>156 <sup>hours</sup></p>
+          </li>
+          <li>
+            <img src="/img/ic_cups.png">
+            <p>215 <sup>cups</sup></p>
+          </li>
+          <li>
+            <img src="/img/ic_code.png">
+            <p>2155 <sup>strings</sup></p>
+          </li>
+        </ul>
+        <ul class="btn-control-group">
+          <li class="btn btn-secondary">Appstore</li>
+          <li class="btn btn-secondary">Playmarket</li>
+        </ul>
+      </div>
     </div>
   </div>
-  <div class="description-wrapper">
-  	<div app>
-     <h1 class="app-title">Clashot</h1>
-     <p class="app-description">
-       Clashot is a photobank in your pocket, that helps you to earn money by taking photos and selling them online. No need to agonize over looking for subjects and objects for your photos: in this app, you can always look at what your friends and other Clashot users are shooting, as well as look through photos deemed the best and most popular.
-     </p>
-     <ul class="labels app-description">
-      <li>
-        <img src="/img/ic_hours.png">
-        <p>156 <sup>hours</sup></p>
-      </li>
-      <li>
-        <img src="/img/ic_cups.png">
-        <p>215 <sup>cups</sup></p>
-      </li>
-      <li>
-        <img src="/img/ic_code.png">
-        <p>2155 <sup>strings</sup></p>
-      </li>
-    </ul>
-    <ul class="btn-control-group">
-      <li class="btn btn-secondary">Appstore</li>
-      <li class="btn btn-secondary">Playmarket</li>
-    </ul>
+
+  <div class="project-wrapper">
+    <div class="app-wrapper">
+      <div class="work-iphone">
+        <img src="img/ph_phone.png">
+      </div>
+      <div id="inside">
+        <img class="app-img active-img" src="./img/apps/cluise/unnamed (1).webp">
+        <img class="app-img" src="./img/apps/cluise/unnamed (2).webp">
+        <img class="app-img" src="./img/apps/cluise/unnamed (3).webp">
+      </div>
+    </div>
+    <div class="description-wrapper">
+     <div app>
+       <h1 class="app-title">Cluise</h1>
+       <p class="app-description">
+         Cluise is a personal stylist that digitizes your wardrobe and creates smart day-to-day looks analyzing your preferences and the real-time weather.
+       </p>
+       <ul class="labels app-description">
+        <li>
+          <img src="/img/ic_hours.png">
+          <p>156 <sup>hours</sup></p>
+        </li>
+        <li>
+          <img src="/img/ic_cups.png">
+          <p>215 <sup>cups</sup></p>
+        </li>
+        <li>
+          <img src="/img/ic_code.png">
+          <p>2155 <sup>strings</sup></p>
+        </li>
+      </ul>
+      <ul class="btn-control-group">
+        <li class="btn btn-secondary">Appstore</li>
+        <li class="btn btn-secondary">Playmarket</li>
+      </ul>
+    </div>
   </div>
+</div>
+
+/* end owl*/ 
+</div>
+<div class="navigation">
+  <div class="pagination-arrow-left previous-arrow">Previous</div>
+  <div class="pagination-arrow-right next-arrow">Next</div>
 </div>
 <script type="text/javascript">
 
   function swapImages() {
+    console.log('here');
     var $active = $('#inside').children('.active-img');
+    console.log($active);
     var $next = $active.next();
     if($next.length === 0) {
       $next = $('#inside').children(':first');
+      console.log('lol');
     }
     $active.removeClass('active-img')
     $next.addClass('active-img')
   };
 
   $(document).ready(function(){     
-    setInterval(swapImages, 2e3);
+    setInterval(swapImages, 6e2);
+    //carousel initialization
+    $('.owl-carousel').owlCarousel({
+      items: 1,
+      loop: false,
+      mouseDrag: false,
+      nav: false
+    });
+
+    $(".previous-arrow").click(function () {
+      $('.owl-carousel').owlCarousel().trigger('prev.owl.carousel');
+    });
+
+    $(".next-arrow").click(function () {
+      $('.owl-carousel').owlCarousel().trigger('next.owl.carousel');
+    });
+    //end carousel 
   });
 
 </script>
