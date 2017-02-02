@@ -6,7 +6,7 @@ $(document).ready(function () {
     return $.get(`/pages/${pageName}.html`).then(html => $('.wrapper').append(html));
   })).then(r => {
     location.hash = location.hash || 'home';
-    setActive.call($('a[href="' + location.hash +'"]').first().get(), null, location.hash);
+    setActive.call($('a[href="' + location.hash + '"]').first().get(), null, location.hash);
     menu.click(setActive);
   });
 
@@ -14,9 +14,6 @@ $(document).ready(function () {
 });
 
 function setActive(e, id) {
-  
-  console.log(this);
-
   $('header.menu a').each(function () {
     $(this).removeClass('selected');
   });
@@ -30,7 +27,6 @@ function setActive(e, id) {
 
   // show current
   var page = id || $(this).attr('href');
-  console.log(page);
   $(page).show();
 };
 
