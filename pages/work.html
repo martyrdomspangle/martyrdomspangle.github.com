@@ -1,3 +1,4 @@
+<link type="text/css" rel="stylesheet" href="./scripts/lightgallery/css/lightgallery.css" />
 <style type="text/css">
   /* Start our work*/
   .page-our-work {
@@ -67,6 +68,7 @@
   }
 
   .owl-prev {
+    display: none;
     cursor: pointer;
     margin-top: -20px;
     overflow: hidden;
@@ -130,9 +132,15 @@
           <img src="img/ph_phone.png">
         </div>
         <div class="media-slide">
-          <img class="app-img active-img" src="./img/apps/clashot/q1_en.png">
-          <img class="app-img" src="./img/apps/clashot/q2_en.png">
-          <img class="app-img" src="./img/apps/clashot/q3_en.png">
+          <a class="app-img active-img" href="./img/apps/clashot/q1_en.png">
+            <img src="./img/apps/clashot/q1_en.png" />
+          </a>
+          <a class="app-img active-img" href="./img/apps/clashot/q2_en.png">
+            <img src="./img/apps/clashot/q2_en.png" />
+          </a>
+          <a class="app-img active-img" href="./img/apps/clashot/q3_en.png">
+            <img src="./img/apps/clashot/q3_en.png" />
+          </a>
         </div>
       </div>
       <div class="description-wrapper">
@@ -169,9 +177,15 @@
         <img src="img/ph_phone.png">
       </div>
       <div class="media-slide">
-        <img class="app-img active-img" src="./img/apps/cluise/unnamed (1).webp">
-        <img class="app-img" src="./img/apps/cluise/unnamed (2).webp">
-        <img class="app-img" src="./img/apps/cluise/unnamed (3).webp">
+        <a class="app-img active-img" href="./img/apps/cluise/unnamed (1).webp">
+            <img src="./img/apps/cluise/unnamed (1).webp" />
+          </a>
+          <a class="app-img active-img" href="./img/apps/cluise/unnamed (2).webp">
+            <img src="./img/apps/cluise/unnamed (2).webp" />
+          </a>
+          <a class="app-img active-img" href="./img/apps/cluise/unnamed (3).webp">
+            <img src="./img/apps/cluise/unnamed (3).webp" />
+          </a>
       </div>
     </div>
     <div class="description-wrapper">
@@ -208,6 +222,7 @@
   <div class="pagination-arrow-left previous-arrow">Previous</div>
   <div class="pagination-arrow-right next-arrow">Next</div>
 </div>
+<script src="./scripts/lightgallery/js/lightgallery.min.js"></script>
 <script type="text/javascript">
 
   function createProject(project){
@@ -217,9 +232,15 @@
           '<img src="img/ph_phone.png">'+
         '</div>'+
         '<div class="media-slide">'+
-          '<img class="app-img active-img" src="./img/apps/clashot/q1_en.png">'+
-          '<img class="app-img" src="./img/apps/clashot/q2_en.png">'+
-          '<img class="app-img" src="./img/apps/clashot/q3_en.png">'+
+             '<a class="app-img active-img" href="./img/apps/clashot/q1_en.png">'+
+            '<img src="./img/apps/clashot/q1_en.png" />'+
+          '</a>'+
+          '<a class="app-img active-img" href="./img/apps/clashot/q2_en.png">'+
+            '<img src="./img/apps/clashot/q2_en.png" />'+
+          '</a>'+
+          '<a class="app-img active-img" href="./img/apps/clashot/q3_en.png">'+
+            '<img src="./img/apps/clashot/q3_en.png" />'+
+          '</a>'+
         '</div>'+
       '</div>'+
       '<div class="description-wrapper">'+
@@ -259,7 +280,8 @@
     //carousel initialization
     $('.owl-carousel').owlCarousel({
       items: 1,
-      loop: false,
+      slideSpeed : 2000,
+      loop: true,
       mouseDrag: false,
       nav: true
     });
@@ -273,7 +295,8 @@
     $(".next-arrow").click(function () {
       $('.owl-carousel').owlCarousel().trigger('next.owl.carousel');
     });
-    //end carousel 
+    //end carousel
+    $(".media-slide").lightGallery();  
   });
 
 </script>
