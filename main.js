@@ -9,6 +9,8 @@ $(document).ready(function () {
     setActive.call($('a[href="' + location.hash +'"]').first().get(), null, location.hash);
     menu.click(setActive);
   });
+
+   setInterval(swapImages, 2e3);
 });
 
 function setActive(e, id) {
@@ -30,4 +32,16 @@ function setActive(e, id) {
   var page = id || $(this).attr('href');
   console.log(page);
   $(page).show();
-}
+};
+
+function swapImages() {
+        $('.media-slide').each(function() {
+          $active = $(this).children('.active-img');
+          var $next = $active.next();
+          if($next.length === 0) {
+              $next = $(this).children(':first');
+          }
+          $active.removeClass('active-img')
+          $next.addClass('active-img')
+      });
+  };
