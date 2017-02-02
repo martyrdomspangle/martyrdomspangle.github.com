@@ -1,3 +1,13 @@
+body {
+  height: auto;
+  min-height: 100vh;
+}
+
+.body-container {
+  top: 0;
+  transform: none;
+}
+
 header.main {
   position: absolute;
 }
@@ -10,23 +20,35 @@ header.menu {
 
 section.wrapper {
   padding-left: 0;
-  padding-top: 115px;
-  position: absolute;
   width: 100%;
   top: 0;
 }
 
 header.menu ul {
-  width: 50%;
-  margin-left: 180px;
+  width: 100%;
+  padding-left: 180px;
 }
 
 header.menu ul li {
   height: 100%;
   width: auto;
   display: inline-block;
+  padding: 0;
+  margin: 0em 1em;
 }
 
+header.menu ul li a {
+  padding: 0;
+  display: table;
+}
+
+header.menu ul li a h3 {
+  height: 100%;
+  line-height: 100%;
+  margin: 0;
+  display: table-cell;
+  vertical-align: middle;
+}
 
 header.menu ul li p {
   display: none;
@@ -40,3 +62,6 @@ header.menu ul li p {
   width: 50%;
 }
 
+.grid > li {
+  width: 33.333%;
+}

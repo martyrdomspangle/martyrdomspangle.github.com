@@ -83,8 +83,7 @@ header.main {
   position: absolute;
   top: 40px;
   right: 0;
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
 
 .social-icons {
@@ -93,7 +92,7 @@ header.main {
 }
 
 .social-icons > li {
-  float: left;
+  display: inline-table;
   margin-right: 15px;
 }
 
@@ -131,6 +130,10 @@ section.wrapper {
   width: 75%;
   padding: 0 5% 0 0;
   display: inline-block;
+}
+
+section.wrapper section {
+  display: none;
 }
 
 section.stripe {
@@ -171,6 +174,10 @@ header.menu a:hover {
   background: url(/img/bgr_nav_selected.png) no-repeat;
 }
 
+header.menu a.selected {
+  background: url(/img/bgr_nav_selected.png) no-repeat;
+}
+
 .page h1 {
   font-family: PeaceSans, sans-serif;
   color: rgb(237, 103, 58);
@@ -203,6 +210,12 @@ header.menu a:hover {
 }
 
 .responsive-ul > li {
+  display: inline-table;
+  table-layout: fixed;
+  width: 25%;
+}
+
+.grid > li {
   display: inline-table;
   table-layout: fixed;
   width: 25%;

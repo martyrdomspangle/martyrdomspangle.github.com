@@ -8,7 +8,6 @@ header.menu {
 
 section.wrapper {
   padding: 0;
-  display: none;
 }
 
 section.stripe {
@@ -23,6 +22,14 @@ section.stripe {
   width: 100%;
 }
 
+.grid > li {
+  width: 50%;
+}
+
 .mobile-hidden {
   display: none;
+}
+
+section.wrapper section {
+  display: block !important;
 }

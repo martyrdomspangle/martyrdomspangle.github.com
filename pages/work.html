@@ -1,3 +1,309 @@
-<section class="page page-about-us">
-  Work
+<link type="text/css" rel="stylesheet" href="./scripts/lightgallery/css/lightgallery.css" />
+<style type="text/css">
+  /* Start our work*/
+  .page-our-work {
+    position:relative;
+    padding: 0 0px;
+  }
+
+  .app-wrapper {
+    position:relative;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 3%;
+  }
+
+  .work-iphone {
+    border: none;
+  }
+
+  .media-slide {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    width: 215px;
+    height: 400px;
+  }
+
+  .app-img {
+    transition: ease-in 1s;
+    left:0;
+    opacity:0;
+    position:absolute;
+    top:0;
+    visibility:hidden;
+    width: 100%;
+  }
+
+  .active-img {
+    opacity:1;
+    visibility:visible
+  }
+
+  .description-wrapper {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(96% - 254px);
+  }
+
+  .label {
+    width: 64px;
+    height: 64px;
+  }
+
+  .app-description {
+    padding: 0;
+  }
+
+  .app-description li {
+    display: inline-block;
+  }
+
+  .app-description li + li {
+    margin-left: 5%;
+  }
+
+  .app-description img {
+    width: 64px !important;
+    height: 64px !important;
+    display: inline-block !important;
+  }
+
+  .app-description li p {
+    display:inline-block;
+  }
+
+  .owl-prev {
+    display: none;
+    cursor: pointer;
+    margin-top: -20px;
+    overflow: hidden;
+    position: absolute;
+    text-indent: -9999em;
+    top: 46%;
+    left: 255px;
+    z-index:1000;
+    background-image: url(./img/arrows_sprites.png);
+    background-repeat: no-repeat;
+    background-position: -0px -2px; width: 22px; height:34px;
+  }
+
+  .owl-next {
+    cursor: pointer;
+    margin-top: -20px;
+    overflow: hidden;
+    pointer-events: auto;
+    position: absolute;
+    text-indent: -9999em;
+    top: 46%;
+    right: 0px;
+    z-index:1000;
+    background-image: url(./img/arrows_sprites.png);
+    background-repeat: no-repeat;
+    background-position: -0px -40px; width: 22px; height:34px;
+  }
+
+  .owl-dots {
+    text-align: center;
+  }
+
+  .owl-dots .owl-dot {
+    display: inline-block;
+  }
+
+  .owl-dots .owl-dot span {
+    background: rgba(255, 255, 255, 0.4);
+    display: block;
+    height: 10px;
+    width: 10px;
+    margin: 10px 15px;
+
+  }
+  .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot.active:hover span {
+    background: rgb(237, 103, 58);
+  }
+  .owl-dots .owl-dot:hover span {
+    background: rgb(237, 103, 58);
+  }
+
+
+  /*End our work*/
+</style>
+<section class="page page-our-work" id="work">
+  <div class="owl-carousel">
+
+    <div class="project-wrapper">
+      <div class="app-wrapper">
+        <div class="work-iphone">
+          <img src="img/ph_phone.png">
+        </div>
+        <div class="media-slide">
+          <a class="app-img active-img" href="./img/apps/clashot/q1_en.png">
+            <img src="./img/apps/clashot/q1_en.png" />
+          </a>
+          <a class="app-img active-img" href="./img/apps/clashot/q2_en.png">
+            <img src="./img/apps/clashot/q2_en.png" />
+          </a>
+          <a class="app-img active-img" href="./img/apps/clashot/q3_en.png">
+            <img src="./img/apps/clashot/q3_en.png" />
+          </a>
+        </div>
+      </div>
+      <div class="description-wrapper">
+       <div app>
+         <h1 class="app-title">Clashot</h1>
+         <p class="app-description">
+           Clashot is a photobank in your pocket, that helps you to earn money by taking photos and selling them online. No need to agonize over looking for subjects and objects for your photos: in this app, you can always look at what your friends and other Clashot users are shooting, as well as look through photos deemed the best and most popular.
+         </p>
+         <ul class="labels app-description">
+          <li>
+            <img src="/img/ic_hours.png">
+            <p>156 <sup>hours</sup></p>
+          </li>
+          <li>
+            <img src="/img/ic_cups.png">
+            <p>215 <sup>cups</sup></p>
+          </li>
+          <li>
+            <img src="/img/ic_code.png">
+            <p>2155 <sup>strings</sup></p>
+          </li>
+        </ul>
+        <ul class="btn-control-group">
+          <li class="btn btn-secondary">Appstore</li>
+          <li class="btn btn-secondary">Playmarket</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-wrapper">
+    <div class="app-wrapper">
+      <div class="work-iphone">
+        <img src="img/ph_phone.png">
+      </div>
+      <div class="media-slide">
+        <a class="app-img active-img" href="./img/apps/cluise/unnamed (1).webp">
+            <img src="./img/apps/cluise/unnamed (1).webp" />
+          </a>
+          <a class="app-img active-img" href="./img/apps/cluise/unnamed (2).webp">
+            <img src="./img/apps/cluise/unnamed (2).webp" />
+          </a>
+          <a class="app-img active-img" href="./img/apps/cluise/unnamed (3).webp">
+            <img src="./img/apps/cluise/unnamed (3).webp" />
+          </a>
+      </div>
+    </div>
+    <div class="description-wrapper">
+     <div app>
+       <h1 class="app-title">Cluise</h1>
+       <p class="app-description">
+         Cluise is a personal stylist that digitizes your wardrobe and creates smart day-to-day looks analyzing your preferences and the real-time weather.
+       </p>
+       <ul class="labels app-description">
+        <li>
+          <img src="/img/ic_hours.png">
+          <p>156 <sup>hours</sup></p>
+        </li>
+        <li>
+          <img src="/img/ic_cups.png">
+          <p>215 <sup>cups</sup></p>
+        </li>
+        <li>
+          <img src="/img/ic_code.png">
+          <p>2155 <sup>strings</sup></p>
+        </li>
+      </ul>
+      <ul class="btn-control-group">
+        <li class="btn btn-secondary">Appstore</li>
+        <li class="btn btn-secondary">Playmarket</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+</div>
+<div class="navigation">
+  <div class="pagination-arrow-left previous-arrow">Previous</div>
+  <div class="pagination-arrow-right next-arrow">Next</div>
+</div>
+<script src="./scripts/lightgallery/js/lightgallery.min.js"></script>
+<script type="text/javascript">
+
+  function createProject(project){
+    var template = '<div class="project-wrapper">'+
+      '<div class="app-wrapper">'+
+        '<div class="work-iphone">'+
+          '<img src="img/ph_phone.png">'+
+        '</div>'+
+        '<div class="media-slide">'+
+             '<a class="app-img active-img" href="./img/apps/clashot/q1_en.png">'+
+            '<img src="./img/apps/clashot/q1_en.png" />'+
+          '</a>'+
+          '<a class="app-img active-img" href="./img/apps/clashot/q2_en.png">'+
+            '<img src="./img/apps/clashot/q2_en.png" />'+
+          '</a>'+
+          '<a class="app-img active-img" href="./img/apps/clashot/q3_en.png">'+
+            '<img src="./img/apps/clashot/q3_en.png" />'+
+          '</a>'+
+        '</div>'+
+      '</div>'+
+      '<div class="description-wrapper">'+
+       '<div app>'+
+         '<h1 class="app-title">' + project.title + '</h1>'+
+         '<p class="app-description">'+
+           project.description +
+         '</p>'+
+         '<ul class="labels app-description">'+
+          '<li>'+
+            '<img src="/img/ic_hours.png">'+
+            '<p>156 <sup>hours</sup></p>'+
+          '</li>'+
+          '<li>'+
+            '<img src="/img/ic_cups.png">'+
+            '<p>215 <sup>cups</sup></p>'+
+          '</li>'+
+          '<li>'+
+            '<img src="/img/ic_code.png">'+
+            '<p>2155 <sup>strings</sup></p>'+
+          '</li>'+
+        '</ul>'+
+        '<ul class="btn-control-group">'+
+          '<li class="btn btn-secondary">Appstore</li>'+
+          '<li class="btn btn-secondary">Playmarket</li>'+
+        '</ul>'+
+      '</div>'+
+    '</div>'+
+  '</div>';
+  return template;
+  };
+
+  $(document).ready(function(){
+
+    var project = createProject({title: 'Rebus', description : 'We love mind games, stylish graphics, and crisp insanity. This application is for such freaks as we are.' });
+
+    //carousel initialization
+    $('.owl-carousel').owlCarousel({
+      items: 1,
+      slideSpeed : 2000,
+      loop: true,
+      mouseDrag: false,
+      nav: true
+    });
+
+    $('.owl-carousel').owlCarousel('add', project).owlCarousel('refresh');
+
+    $(".previous-arrow").click(function () {
+      $('.owl-carousel').owlCarousel().trigger('prev.owl.carousel');
+    });
+
+    $(".next-arrow").click(function () {
+      $('.owl-carousel').owlCarousel().trigger('next.owl.carousel');
+    });
+    //end carousel
+    $(".media-slide").lightGallery();
+  });
+
+</script>
 </section>
