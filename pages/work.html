@@ -14,7 +14,7 @@
   }
 
   .work-iphone {
-    border: none;   
+    border: none;
   }
 
   .media-slide {
@@ -43,7 +43,7 @@
   .description-wrapper {
     display: inline-block;
     vertical-align: top;
-    width: 65%;
+    width: calc(96% - 254px);
   }
 
   .label {
@@ -279,7 +279,7 @@
   return template;
   };
 
-  $(document).ready(function(){     
+  $(document).ready(function(){
 
     var project = createProject({title: 'Rebus', description : 'We love mind games, stylish graphics, and crisp insanity. This application is for such freaks as we are.' });
 
@@ -302,7 +302,7 @@
       $('.owl-carousel').owlCarousel().trigger('next.owl.carousel');
     });
     //end carousel
-    $(".media-slide").lightGallery();  
+    $(".media-slide").lightGallery();
   });
 
 </script>
