@@ -1,3 +1,13 @@
+body {
+  height: auto;
+  min-height: 100vh;
+}
+
+.body-container {
+  top: 0;
+  transform: none;
+}
+
 header.main {
   position: absolute;
 }
@@ -10,8 +20,6 @@ header.menu {
 
 section.wrapper {
   padding-left: 0;
-  padding-top: 115px;
-  position: absolute;
   width: 100%;
   top: 0;
 }
@@ -43,4 +51,3 @@ header.menu ul li p {
 .grid > li {
   width: 33.333%;
 }
-
