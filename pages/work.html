@@ -16,7 +16,7 @@
     border: none;   
   }
 
-  #inside {
+  .media-slide {
     position: absolute;
     top: 60px;
     left: 20px;
@@ -129,7 +129,7 @@
         <div class="work-iphone">
           <img src="img/ph_phone.png">
         </div>
-        <div id="inside">
+        <div class="media-slide">
           <img class="app-img active-img" src="./img/apps/clashot/q1_en.png">
           <img class="app-img" src="./img/apps/clashot/q2_en.png">
           <img class="app-img" src="./img/apps/clashot/q3_en.png">
@@ -168,7 +168,7 @@
       <div class="work-iphone">
         <img src="img/ph_phone.png">
       </div>
-      <div id="inside">
+      <div class="media-slide">
         <img class="app-img active-img" src="./img/apps/cluise/unnamed (1).webp">
         <img class="app-img" src="./img/apps/cluise/unnamed (2).webp">
         <img class="app-img" src="./img/apps/cluise/unnamed (3).webp">
@@ -210,23 +210,13 @@
 </div>
 <script type="text/javascript">
 
-  function swapImages() {
-    var $active = $('#inside').children('.active-img');
-    var $next = $active.next();
-    if($next.length === 0) {
-      $next = $('#inside').children(':first');
-    }
-    $active.removeClass('active-img')
-    $next.addClass('active-img')
-  };
-
   function createProject(project){
     var template = '<div class="project-wrapper">'+
       '<div class="app-wrapper">'+
         '<div class="work-iphone">'+
           '<img src="img/ph_phone.png">'+
         '</div>'+
-        '<div id="inside">'+
+        '<div class="media-slide">'+
           '<img class="app-img active-img" src="./img/apps/clashot/q1_en.png">'+
           '<img class="app-img" src="./img/apps/clashot/q2_en.png">'+
           '<img class="app-img" src="./img/apps/clashot/q3_en.png">'+
@@ -263,7 +253,6 @@
   };
 
   $(document).ready(function(){     
-    setInterval(swapImages, 6e2);
 
     var project = createProject({title: 'Rebus', description : 'We love mind games, stylish graphics, and crisp insanity. This application is for such freaks as we are.' });
 
