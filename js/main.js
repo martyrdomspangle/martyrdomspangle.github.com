@@ -1,10 +1,10 @@
 $(document).ready(function () {
   var menu = $('header.menu a');
-  Promise.all(menu.map((_, anchor) => {
+  Promise.all(menu.map(function(_, anchor) {
     const pageName = $(anchor).attr('href').substring(1);
 
-    return $.get(`/pages/${pageName}.html`).then(html => $('.wrapper').append(html));
-  })).then(r => {
+    return $.get('/pages/' + pageName + '.html').then(function(html) { $('.wrapper').append(html); });
+  })).then(function(r) {
     location.hash = location.hash || 'home';
     setActive.call($('a[href="' + location.hash + '"]').first().get(), null, location.hash);
     menu.click(setActive);

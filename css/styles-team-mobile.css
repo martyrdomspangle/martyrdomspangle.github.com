@@ -6,3 +6,26 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+@media screen and (max-width: 980px) {
+  .members.grid li .avatar-container {
+    float: left;
+  }
+
+  .members.grid li p,
+  .members.grid li .social-icons {
+    padding-left: 150px;
+    text-align: left;
+  }
+
+  .members.grid li .name {
+    padding-left: 10px;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .members.grid > li {
+    width: 100%;
+  }
+}
