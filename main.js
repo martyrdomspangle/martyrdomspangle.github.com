@@ -10,7 +10,7 @@ $(document).ready(function () {
     menu.click(setActive);
   });
 
-   setInterval(swapImages, 2e3);
+  setInterval(swapImages, 2e3);
 });
 
 function setActive(e, id) {
@@ -35,13 +35,13 @@ function setActive(e, id) {
 };
 
 function swapImages() {
-        $('.media-slide').each(function() {
-          $active = $(this).children('.active-img');
-          var $next = $active.next();
-          if($next.length === 0) {
-              $next = $(this).children(':first');
-          }
-          $active.removeClass('active-img')
-          $next.addClass('active-img')
-      });
-  };
+  $('.media-slide').each(function () {
+    $active = $(this).children('.active-img');
+    var $next = $active.next();
+    if ($next.length === 0) {
+      $next = $(this).children(':first');
+    }
+    $active.removeClass('active-img')
+    $next.addClass('active-img')
+  });
+};
