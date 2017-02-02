@@ -1,10 +1,10 @@
 <style type="text/css">
 	/* start aboutUS*/
-  .page-about-us{
+  .page-about-us {
    position:relative;
  }
 
- .page-about-us ul{
+ .page-about-us ul {
   text-align: justify;
   position: relative;
   top: 0px;
@@ -16,14 +16,14 @@
   padding: 0;
 }
 
-.page-about-us li{
+.page-about-us li {
   display:inline-table;
   position:relative;
   list-style: none;
   width: 30%;
 }
 
-.page-about-us li + li{
+.page-about-us li + li {
   margin-left: 4%;
 }
 
@@ -34,7 +34,7 @@
   max-width: 100%;
 }
 
-.benefit-heading{
+.benefit-heading {
 	text-transform: uppercase;
 	text-align: center;
   padding: 10px 10px;
@@ -52,7 +52,7 @@
 .benefit-description {
   padding: 10px 0;
 }
-.page-about-us p{
+.page-about-us p {
   font-family: ProximaNova, sans-serif;
   font-size: 14pt;
   color: rgb(173, 172, 180);
@@ -69,6 +69,13 @@
 	.page-about-us {
 		max-width: calc(100% - 100px);
 		margin: auto;
+	}
+}
+
+@media screen and (max-width: 980px) {
+	.page-about-us li {
+		width: 100%;
+		margin: 0 !important;
 	}
 }
 /* end aboutUS*/
