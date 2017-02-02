@@ -66,40 +66,58 @@
     display:inline-block;
   }
 
-  .pagination-arrow-left{
+  .owl-prev {
     cursor: pointer;
     margin-top: -20px;
     overflow: hidden;
     position: absolute;
     text-indent: -9999em;
-    top: 50%;
-    left: -25px;
+    top: 46%;
+    left: 255px;
     z-index:1000;
+    background-image: url(./img/arrows_sprites.png);
+    background-repeat: no-repeat;
+    background-position: -0px -2px; width: 22px; height:34px;
   }
 
-  .pagination-arrow-right {
+  .owl-next {
     cursor: pointer;
     margin-top: -20px;
     overflow: hidden;
     pointer-events: auto;
     position: absolute;
     text-indent: -9999em;
-    top: 50%;
-    right: -25px;
+    top: 46%;
+    right: 0px;
     z-index:1000;
-  }
-
-  .previous-arrow {
-    background-image: url(./img/arrows_sprites.png);
-    background-repeat: no-repeat;
-    background-position: -0px -2px; width: 22px; height:34px;
-  }
-
-  .next-arrow {
     background-image: url(./img/arrows_sprites.png);
     background-repeat: no-repeat;
     background-position: -0px -40px; width: 22px; height:34px;
   }
+
+  .owl-dots {
+    text-align: center;
+  }
+
+  .owl-dots .owl-dot {
+    display: inline-block;
+  }
+
+  .owl-dots .owl-dot span {
+    background: rgba(255, 255, 255, 0.4);
+    display: block;
+    height: 10px;
+    width: 10px;
+    margin: 10px 15px;
+
+  }
+  .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot.active:hover span {
+    background: rgb(237, 103, 58);
+  }
+  .owl-dots .owl-dot:hover span {
+    background: rgb(237, 103, 58);
+  }
+
 
   /*End our work*/
 </style>
@@ -255,7 +273,7 @@
       items: 1,
       loop: false,
       mouseDrag: false,
-      nav: false
+      nav: true
     });
 
     $('.owl-carousel').owlCarousel('add', project).owlCarousel('refresh');
