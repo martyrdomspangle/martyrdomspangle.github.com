@@ -239,6 +239,7 @@
   <div class="pagination-arrow-right next-arrow">Next</div>
 </div>
 <script src="./js/lightgallery/js/lightgallery.min.js"></script>
+<script src="./js/lightgallery/js/lg-zoom.js"></script>
 <script type="text/javascript">
 
   function createProject(project){
@@ -312,7 +313,10 @@
       $('.owl-carousel').owlCarousel().trigger('next.owl.carousel');
     });
     //end carousel
-    $(".media-slide").lightGallery();
+    $(".media-slide").lightGallery({
+      zoom : true,
+      download : false
+    });
   });
 
 </script>
