@@ -1,5 +1,6 @@
 .members > li {
-  text-align: center;
+  margin: 25px 0;
+  padding: 0;
 }
 
 .members .social-icons {
@@ -8,20 +9,41 @@
 }
 
 @media screen and (max-width: 980px) {
-  .members.grid li .avatar-container {
-    float: left;
+
+  .page-team{
+    max-width: 100%;
   }
 
   .members.grid li p,
   .members.grid li .social-icons {
-    padding-left: 150px;
     text-align: left;
   }
 
   .members.grid li .name {
-    padding-left: 10px;
     text-align: left;
+    margin: 0;
   }
+
+  .avatar-container {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 25px;
+  }
+
+  .avatar-container img {
+    width: 60px;
+  }
+
+  .member-info {
+    display: inline-block;
+    vertical-align: top;
+    width: 65%;
+  }
+
+  .member-info p {
+    margin: 0;
+  }
+
 }
 
 @media screen and (max-width: 768px) {
