@@ -2,6 +2,18 @@ header.main {
   position: static;
 }
 
+.btn-hire {
+  display: initial;
+  position: absolute;
+  right: 25px;
+  color: rgb(237, 103, 58);
+  font-size: 10pt;
+  text-transform: uppercase;
+  top: 35px;
+  font-family: PeaceSans, sans-serif;
+  padding: 0;
+}
+
 header.menu {
   display: none;
 }

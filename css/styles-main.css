@@ -116,6 +116,10 @@ header.main {
   content: url(/img/ic_twitter.png);
 }
 
+.btn-hire {
+  display: none;
+}
+
 header.menu {
   height: 100%;
   float: left;
