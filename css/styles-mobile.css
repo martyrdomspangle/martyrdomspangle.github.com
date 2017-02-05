@@ -33,3 +33,43 @@ section.stripe {
 section.wrapper section {
   display: block !important;
 }
+
+.page h1 {
+  font-size: 21pt;
+}
+
+.page-home {
+  max-width: calc(100% - 30px) !important;
+}
+
+.page-home ul.labels {
+  max-width: 100%;
+  margin: 50px 0 0;
+  width: 100%;
+}
+
+.page-home ul.labels li {
+  padding: 0;
+}
+
+.info-container {
+  width: 65%;
+}
+
+.info-container h3 {
+  margin-top: 0;
+}
+
+.btn-control-group li {
+  width: 46.5%;
+  min-width: 46.5%;
+  padding: 10px;
+  margin-right: 0;
+}
+.btn-control-group li + li {
+  margin-left: 5%;
+}
+
+.page .btn {
+  font-size: 10pt;
+}

@@ -204,14 +204,47 @@ header.menu a.selected {
   height: 100px;
   margin-left: -3px;
   margin-bottom: -5px;
-  padding-left: 64px;
+}
+
+.icon {
   background-repeat: no-repeat !important;
+  background-position: center center;
+  width: 35px;
+  height: 35px;
+}
+
+.mobile-icon {
+  background-image: url('/img/ic_mobile.png');
+}
+.web-icon {
+  background-image: url('/img/ic_web.png');
+}
+.test-icon {
+  background-image: url('/img/ic_testing.png');
+}
+.maintenance-icon {
+  background-image: url('/img/ic_maintainance.png');
 }
 
 .responsive-ul > li {
   display: inline-table;
   table-layout: fixed;
   width: 25%;
+}
+
+.image-container, .info-container {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.info-container {
+  width: 74%;
+  margin-left: 15px;
+}
+
+.info-container > h3 {
+  text-transform: uppercase;
+  margin-top: 0;
 }
 
 .grid > li {
