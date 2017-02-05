@@ -2,6 +2,10 @@ header.main {
   position: static;
 }
 
+.logo {
+  margin-left: 15px;
+}
+
 .btn-hire {
   display: initial;
   position: absolute;
