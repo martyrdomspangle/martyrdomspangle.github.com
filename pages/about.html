@@ -73,10 +73,48 @@
 }
 
 @media screen and (max-width: 980px) {
-	.page-about-us li {
-		width: 100%;
-		margin: 0 !important;
-	}
+  .page-about-us {
+    max-width: calc(100% - 30px);
+  }
+
+  .page-about-us li {
+    width: 100%;
+    margin: 0 !important;
+  }
+
+  .about-img {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 15px;
+  }
+
+  .about-img img {
+    max-width: 50px;
+    margin-top: 0;
+  }
+
+  .about-description {
+    display: inline-block;
+    vertical-align: top;
+    width: 75%;
+  }
+
+  .benefit-heading {
+    text-align: left;
+    padding: 0;
+  }
+
+  .benefit-description {
+    padding: 0;
+  }
+
+  .benefit-description > p {
+    font-size: 10pt;
+  }
+
+  .line-separator {
+    display: none;
+  }
 }
 /* end aboutUS*/
 
@@ -84,27 +122,39 @@
 <section class="page page-about-us" id="about">
   <ul>
     <li>
+      <div class="about-img">
       <img src="/img/ic_clock.png">
+      </div>
+      <div class="about-description">
       <div class="benefit-heading"><p>Agile timing</p></div>
       <div class="line-separator"></div>
       <div class="benefit-description">
       <p>Rapid and short iterations with frequent deliveries are used to increase the quality of products and shorten a time required to complete the project. We choose the particular development model adjusted according to the project's needs.</p>
       </div>
+      </div>
     </li>
     <li>
+      <div class="about-img">
       <img src="/img/ic_star.png">
+      </div>
+      <div class="about-description">
       <div class="benefit-heading"><p>Awesome quality</p></div>
       <div class="line-separator"></div>
       <div class="benefit-description">
       <p>Creating unique and outstanding experiences using state-of-the-art technology is what drives our creative process and enables crafting exquisite applications. Our team consists of highly professional engineers with a large experience in software development.</p>
       </div>
+      </div>
     </li>
     <li>
+      <div class="about-img">
       <img src="/img/ic_calc.png">
+      </div>
+      <div class="about-description">
       <div class="benefit-heading"><p>Exceptional value</p></div>
       <div class="line-separator"></div>
       <div class="benefit-description">
       <p>We do not pay to unnecessary managers, HRs, and bookkeepers. We are people involved directly in the analysis and development of your project. The key to success is a mix of excellent quality and reasonable value.</p>
+      </div>
       </div>
     </li>
   </ul>
