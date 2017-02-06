@@ -29,6 +29,10 @@ body {
   background-size: cover !important;
 }
 
+.mobile-visible {
+  display: none;
+}
+
 p {
   color: #9998a5;
   font-size: 12pt;

@@ -1,3 +1,8 @@
+
+.mobile-visible {
+  display: initial;
+}
+
 header.main {
   position: static;
 }
@@ -52,6 +57,17 @@ section.wrapper section {
 
 .page h1 {
   font-size: 21pt;
+}
+
+.section-title {
+  margin: 0 auto 15px;
+  text-align: center;
+}
+
+.section-description {
+  color: rgb(255, 255, 255) !important;
+  font-size: 16pt !important;
+  text-transform: uppercase;
 }
 
 .page-home {
