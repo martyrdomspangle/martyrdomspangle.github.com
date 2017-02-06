@@ -14,11 +14,16 @@
   src: url("/fonts/peace_sans.otf") format("opentype");
 }
 
+html {
+  width: 100%;
+  height: 100%;
+}
+
 body {
   font-family: ProximaNova, sans-serif !important;
   margin: 0;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   position: absolute;
   background: url('/img/bgr_main.jpg') no-repeat fixed !important;
   background-size: cover !important;
