@@ -146,6 +146,11 @@
     .page-our-work {
       max-width: calc(100% - 30px);
       margin: 0 15px;
+      font-size: 12px;
+    }
+
+    .section-title {
+      font-size: 2.5em;
     }
 
     .media-slide {
@@ -156,7 +161,7 @@
 
     .app-wrapper {
       display: block;
-      max-width: 62.5%;
+      max-width: 45%;
       margin: 0 auto;
     }
 
@@ -164,8 +169,22 @@
       width: 100%;
     }
 
+    .description-wrapper .app-title {
+      font-size: 1.5em;
+    }
+
+    .description-wrapper .app-description {
+      font-size: 1em;
+      max-height: 4em;
+      width: 100%;
+      text-overflow: ellipsis;
+      line-height: 1.5em;
+      overflow: hidden;
+    }
+
     .description-wrapper li {
       width: 32%;
+      vertical-align: top;
     }
 
     .description-wrapper .app-description li + li {
@@ -178,24 +197,40 @@
     }
 
     .description-wrapper li > p{
-      width: 45%;
+      width: 40%;
       margin-bottom: 0;
       padding-top: 5px;
+      font-size: 1em;
+    }
+
+    .btn-control-group {
+      margin: 1em 0;
+    }
+
+    .btn {
+      font-size: 1.1em;
+      padding: 0.5em;
     }
 
     .owl-prev {
       display: initial;
-      top: 20%;
-      left: 5%;
+      top: 40%;
+      left: 0%;
     }
 
     .owl-next {
-      top: 20%;
-      right: 5%;
+      top: 40%;
+      right: 0%;
     }
 
     .owl-dots {
       position: relative;
+    }
+
+    .owl-dots .owl-dot span {
+      height: 0.5em;
+      width: 0.5em;
+      margin-top: 0;
     }
 
     .navigation {
@@ -203,6 +238,7 @@
     }
 
     .previous-arrow {
+      display: none;
       z-index: 5000;
       opacity: 0.5;
       color: red;
@@ -215,6 +251,7 @@
     }
 
     .next-arrow {
+      display: none;
       z-index: 5000;
       opacity: 0.5;
       color: red;

@@ -55,18 +55,22 @@ section.wrapper section {
   display: block !important;
 }
 
+.page {
+  font-size: 12px;
+}
+
 .page h1 {
   font-size: 21pt;
 }
 
 .section-title {
-  margin: 0 auto 15px;
+  margin: 45px auto 15px;
   text-align: center;
 }
 
 .section-description {
   color: rgb(255, 255, 255) !important;
-  font-size: 16pt !important;
+  font-size: 0.9em !important;
   text-transform: uppercase;
 }
 
