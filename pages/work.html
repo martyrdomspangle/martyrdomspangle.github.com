@@ -58,7 +58,9 @@
   }
 
   .app-description {
+    color: rgb(255, 255, 255);
     padding: 0;
+    margin: 15px 0 0 0;
   }
 
   .app-description li {
@@ -69,13 +71,34 @@
     margin-left: 5%;
   }
 
-  .app-description img {
-    width: 64px !important;
-    display: inline-block !important;
+  .stats-img {
+    display: inline-block;
+    width: 40px;
+    height: 30px;
   }
+
+  .app-description img {
+    display: inline-block;
+    width: 45px !important;
+  }
+
+  .app-stats {
+    display: inline-block;
+    font-size: 16pt;
+    color: rgb(255, 255, 255);
+  }
+
+  .stats-number {
+    font-family: PeaceSans, sans-serif;
+  }
+
 
   .app-description li p {
     display:inline-block;
+  }
+
+  .btn-control-group {
+    text-transform: uppercase;
   }
 
   .owl-prev {
@@ -85,12 +108,14 @@
     overflow: hidden;
     position: absolute;
     text-indent: -9999em;
-    top: 46%;
+    top: 40%;
     left: 255px;
     z-index:1000;
-    background-image: url(./img/arrows_sprites.png);
+    background-image: url(./img/arr-left.png);
     background-repeat: no-repeat;
-    background-position: -0px -2px; width: 22px; height:34px;
+    width: 30px;
+    height: 30px;
+    background-size: 30px 30px;
   }
 
   .owl-next {
@@ -100,12 +125,13 @@
     pointer-events: auto;
     position: absolute;
     text-indent: -9999em;
-    top: 46%;
+    top: 40%;
     right: 0px;
     z-index:1000;
-    background-image: url(./img/arrows_sprites.png);
-    background-repeat: no-repeat;
-    background-position: -0px -40px; width: 22px; height:34px;
+    background-image: url(./img/arr-right.png);
+    width: 30px;
+    height: 30px;
+    background-size: 30px 30px;
   }
 
   .owl-dots {
@@ -139,6 +165,16 @@
     padding-right: 5%;
   }
 
+  @media screen and (min-width: 1025px) {
+    .stats-desc {
+      position: relative;
+      top: -.7em;
+      font-size: 60%;
+      line-height: 0;
+      vertical-align: baseline;
+    }
+  }
+
   @media screen and (max-width: 1024px) {
     .page-our-work {
       max-width: calc(100% - 100px);
@@ -157,6 +193,7 @@
 
     .section-title {
       font-size: 2.5em;
+      margin-bottom: 10%;
     }
 
     .media-slide {
@@ -167,7 +204,7 @@
 
     .app-wrapper {
       display: block;
-      max-width: 45%;
+      max-width: 35%;
       margin: 0 auto;
     }
 
@@ -176,7 +213,7 @@
     }
 
     .description-wrapper .app-title {
-      font-size: 1.5em;
+      font-size: 1.8em;
     }
 
     .description-wrapper .app-description {
@@ -209,8 +246,25 @@
       font-size: 1em;
     }
 
+    .stats-img {
+      height: 36px;
+    }
+
+    .app-stats {
+      font-size: 12pt;
+    }
+
+    .app-stats span {
+      display: block;
+    }
+
+    .stats-desc {
+      font-size: 80%;
+    }
+
     .btn-control-group {
       margin: 1em 0;
+      margin-bottom: 0;
     }
 
     .btn {
@@ -220,17 +274,18 @@
 
     .owl-prev {
       display: initial;
-      top: 40%;
+      top: 25%;
       left: 0%;
     }
 
     .owl-next {
-      top: 40%;
+      top: 25%;
       right: 0%;
     }
 
     .owl-dots {
       position: relative;
+      padding-top: 10%;
     }
 
     .owl-dots .owl-dot span {
@@ -304,19 +359,19 @@
          <p class="app-description">
            Clashot is a photobank in your pocket, that helps you to earn money by taking photos and selling them online. No need to agonize over looking for subjects and objects for your photos: in this app, you can always look at what your friends and other Clashot users are shooting, as well as look through photos deemed the best and most popular.
          </p>
-         <ul class="labels app-description">
+         <ul class="app-description">
           <li>
-            <img src="/img/ic_hours.png">
-            <p>156 <sup>hours</sup></p>
+            <span class="stats-img"><img src="/img/ic_hours.png"></span>
+            <div class="app-stats"><span class="stats-number">156 </span><span class="stats-desc">hours</span></div>
           </li>
-          <li>
-            <img src="/img/ic_cups.png">
-            <p>215 <sup>cups</sup></p>
-          </li>
-          <li>
-            <img src="/img/ic_code.png">
-            <p>2155 <sup>strings</sup></p>
-          </li>
+           <li>
+             <span class="stats-img"><img src="/img/ic_cups.png"></span>
+             <div class="app-stats"><span class="stats-number">215 </span><span class="stats-desc">cups</span></div>
+           </li>
+           <li>
+             <span class="stats-img"><img src="/img/ic_code.png"></span>
+             <div class="app-stats"><span class="stats-number">2155 </span><span class="stats-desc">lines</span></div>
+           </li>
         </ul>
         <ul class="btn-control-group">
           <li class="btn btn-secondary">Appstore</li>
@@ -349,20 +404,20 @@
        <p class="app-description">
          Cluise is a personal stylist that digitizes your wardrobe and creates smart day-to-day looks analyzing your preferences and the real-time weather.
        </p>
-       <ul class="labels app-description">
-        <li>
-          <img src="/img/ic_hours.png">
-          <p>156 <sup>hours</sup></p>
-        </li>
-        <li>
-          <img src="/img/ic_cups.png">
-          <p>215 <sup>cups</sup></p>
-        </li>
-        <li>
-          <img src="/img/ic_code.png">
-          <p>2155 <sup>strings</sup></p>
-        </li>
-      </ul>
+       <ul class="app-description">
+         <li>
+           <span class="stats-img"><img src="/img/ic_hours.png"></span>
+           <div class="app-stats"><span class="stats-number">156 </span><span class="stats-desc">hours</span></div>
+         </li>
+         <li>
+           <span class="stats-img"><img src="/img/ic_cups.png"></span>
+           <div class="app-stats"><span class="stats-number">215 </span><span class="stats-desc">cups</span></div>
+         </li>
+         <li>
+           <span class="stats-img"><img src="/img/ic_code.png"></span>
+           <div class="app-stats"><span class="stats-number">2155 </span><span class="stats-desc">lines</span></div>
+         </li>
+       </ul>
       <ul class="btn-control-group">
         <li class="btn btn-secondary">Appstore</li>
         <li class="btn btn-secondary">Playmarket</li>
