@@ -347,17 +347,41 @@
           <img src="img/ph_phone.png">
         </div>
         <div class="media-slide">
-          <a class="app-img active-img" href="./img/apps/clashot/q1_en.png">
-            <img src="./img/apps/clashot/q1_en.png" />
+          <a class="app-img active-img" href="./img/apps/Clashot/e1488388652709_o.jpg">
+            <img src="./img/apps/Clashot/e1488388652709_t.png">
           </a>
-          <a class="app-img active-img" href="./img/apps/clashot/q2_en.png">
-            <img src="./img/apps/clashot/q2_en.png" />
+          <a class="app-img" href="./img/apps/Clashot/e1488389663947_o.jpg">
+            <img src="./img/apps/Clashot/e1488389663947_t.png">
           </a>
-          <a class="app-img active-img" href="./img/apps/clashot/q3_en.png">
-            <img src="./img/apps/clashot/q3_en.png" />
+          <a class="app-img" href="./img/apps/Clashot/e1488389733520_o.jpg">
+            <img src="./img/apps/Clashot/e1488389733520_t.png">
+          </a>
+          <a class="app-img" href="./img/apps/Clashot/e1488389794255_o.jpeg">
+            <img src="./img/apps/Clashot/e1488389794255_t.jpeg">
+          </a>
+          <a class="app-img" href="./img/apps/Clashot/e1488389902499_o.jpeg">
+            <img src="./img/apps/Clashot/e1488389902499_t.jpeg">
+          </a>
+          <a class="app-img" href="./img/apps/Clashot/e1488389967898_o.jpeg">
+            <img src="./img/apps/Clashot/e1488389967898_t.jpeg">
+          </a>
+          <a class="app-img" href="./img/apps/Clashot/e1488390067167_o.jpeg">
+            <img src="./img/apps/Clashot/e1488390067167_t.jpeg">
+          </a>
+          <a class="app-img" href="./img/apps/Clashot/e1488390124371_o.jpeg">
+            <img src="./img/apps/Clashot/e1488390124371_t.jpeg">
+          </a>
+          <a class="app-img" href="./img/apps/Clashot/e1488390175395_o.png">
+            <img src="./img/apps/Clashot/e1488390175395_t.png">
+          </a>
+          <a class="app-img" href="./img/apps/Clashot/e1488390223222_o.png">
+            <img src="./img/apps/Clashot/e1488390223222_t.png">
+          </a>
+          <a class="app-img" href="./img/apps/Clashot/e1488390267706_o.png">
+            <img src="./img/apps/Clashot/e1488390267706_t.png">
           </a>
         </div>
-      </div>
+        </div>
       <div class="description-wrapper">
        <div app>
          <h1 class="app-title">Clashot</h1>
@@ -401,17 +425,7 @@
         '<div class="work-iphone">'+
           '<img src="img/ph_phone.png">'+
         '</div>'+
-        '<div class="media-slide">'+
-             '<a class="app-img active-img" href="./img/apps/clashot/q1_en.png">'+
-            '<img src="./img/apps/clashot/q1_en.png" />'+
-          '</a>'+
-          '<a class="app-img active-img" href="./img/apps/clashot/q2_en.png">'+
-            '<img src="./img/apps/clashot/q2_en.png" />'+
-          '</a>'+
-          '<a class="app-img active-img" href="./img/apps/clashot/q3_en.png">'+
-            '<img src="./img/apps/clashot/q3_en.png" />'+
-          '</a>'+
-        '</div>'+
+                    generateProjectImages(project.imagesData) +
       '</div>'+
       '<div class="description-wrapper">'+
        '<div app>'+
@@ -443,6 +457,18 @@
   return template;
   };
 
+  function generateProjectImages(imagesData){
+    var baseAddress = imagesData.baseAddress;
+    var images = '<div class="media-slide">';
+    for(var i = 0; i < imagesData.imagesList.thumbnail.length; ++i){
+      images = images + '<a class="app-img active-img" href="' + baseAddress + imagesData.imagesList.original[i] +'">' +
+              '<img src="' + baseAddress + imagesData.imagesList.thumbnail[i] + '" />' +
+              '</a>';
+    }
+    images += '</div>';
+    return images;
+  };
+
   $(document).ready(function(){
 
     //carousel initialization
@@ -455,7 +481,24 @@
     });
 
     var projects = [
-      {
+       {
+        title: 'Clashot',
+        description: 'Clashot is a photobank in your pocket, that helps you to earn money by taking photos and selling them online. No need to agonize over looking for subjects and objects for your photos: in this app, you can always look at what your friends and other Clashot users are shooting, as well as look through photos deemed the best and most popular.',
+         imagesData: {
+           baseAddress: './img/apps/Clashot/',
+           imagesList: {
+             thumbnail: ['e1488388652709_t.png', 'e1488389663947_t.png', 'e1488389733520_t.png', 'e1488389794255_t.jpeg',
+               'e1488389902499_t.jpeg', 'e1488389967898_t.jpeg', 'e1488390067167_t.jpeg', 'e1488390124371_t.jpeg',
+               'e1488390175395_t.png', 'e1488390223222_t.png', 'e1488390267706_t.png' ],
+             original: ['e1488388652709_o.jpg', 'e1488389663947_o.jpg', 'e1488389733520_o.jpg', 'e1488389794255_o.jpeg',
+               'e1488389902499_o.jpeg', 'e1488389967898_o.jpeg', 'e1488390067167_o.jpeg', 'e1488390124371_o.jpeg',
+               'e1488390175395_o.png', 'e1488390223222_o.png', 'e1488390267706_o.png' ]
+           }
+         }
+      }/*, {
+        title: 'Cluise',
+        description: 'Cluise is a personal stylist that digitizes your wardrobe and creates smart day-to-day looks analyzing your preferences and the real-time weather.'
+      }, {
         title: 'Rebus',
         description: 'We love mind games, stylish graphics, and crisp insanity. This application is for such freaks as we are.'
       }, {
@@ -463,17 +506,14 @@
         description: 'City Taxt is the first and only taxi app in Khmelnitsky. Small but smart, effective and accurate, it delivers the best experience for relieble ridesharing.'
       }, {
         title: 'Mobile Hero',
-        description: 'MobileHero is a geo-located, on-demand task outsourcing app. It let’s you instantly connect with safe and reliable help to get any job done. Hire vetted, community-rated professionals in your area all from the convenience of your phone. Manage your job on the go and get real-time updates from your Hero about the status of your job. Rate your hero at the end to help keep our community of earners top-notch.'
+        description: 'MobileHero is a geo-located, on-demand task outsourcing app. It let?s you instantly connect with safe and reliable help to get any job done. Hire vetted, community-rated professionals in your area all from the convenience of your phone. Manage your job on the go and get real-time updates from your Hero about the status of your job. Rate your hero at the end to help keep our community of earners top-notch.'
       }, {
         title: 'ROYAVR',
         description: 'Virtual reality tours are made for the best presentation of the real estate properties. Real Estate Agents may use it to share virtual reality experience with their clients.'
-      }, {
-        title: 'Cluise',
-        description: 'Cluise is a personal stylist that digitizes your wardrobe and creates smart day-to-day looks analyzing your preferences and the real-time weather.'
-      }
+      }*/
     ];
 
-    for(var i = projects.length - 1; i > -1; --i){
+    for(var i = 0; i < projects.length; ++i){
       var project = createProject(projects[i]);
       $('.owl-carousel').owlCarousel('add', project).owlCarousel('refresh');
     }
