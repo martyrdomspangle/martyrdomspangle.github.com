@@ -466,8 +466,12 @@
   function generateProjectImages(imagesData){
     var baseAddress = imagesData.baseAddress;
     var images = '<div class="media-slide">';
-    for(var i = 0; i < imagesData.imagesList.thumbnail.length; ++i){
-      images = images + '<a class="app-img active-img" href="' + baseAddress + imagesData.imagesList.original[i] +'">' +
+    if(imagesData.imagesList.thumbnail[0])
+    images = images + '<a class="app-img active-img" href="' + baseAddress + imagesData.imagesList.original[0] +'">' +
+              '<img src="' + baseAddress + imagesData.imagesList.thumbnail[0] + '" />' +
+              '</a>';
+    for(var i = 1; i < imagesData.imagesList.thumbnail.length; ++i){
+      images = images + '<a class="app-img" href="' + baseAddress + imagesData.imagesList.original[i] +'">' +
               '<img src="' + baseAddress + imagesData.imagesList.thumbnail[i] + '" />' +
               '</a>';
     }
