@@ -309,6 +309,27 @@ header.menu a.selected {
   outline: none;
 }
 
+a.btn {
+  background: rgba(255,255,255, 0.2);
+  border: none;
+  border-radius: 0;
+  color: #fff;
+  display: inline-block;
+  font-family: PeaceSans, sans-serif;
+  font-size: 14pt;
+  line-height: 14pt;
+  font-weight: 400;
+  height: auto;
+  width: 200px;
+  text-align: center;
+  letter-spacing: .5px;
+  padding: 20px 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin: 0 11px;
+}
+
 @media (max-width: 1320px) {
   .page-home ul.labels {
     width: 90%;
