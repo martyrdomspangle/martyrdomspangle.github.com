@@ -330,7 +330,7 @@ a.btn {
   margin: 0 11px;
 }
 
-.btn-secondary button:hover, button.btn-secondary:hover, a.btn-secondary:hover {
+.btn-secondary:hover, .btn-secondary button:hover, button.btn-secondary:hover, a.btn-secondary:hover {
   color: rgb(237, 103, 58);
 }
 
