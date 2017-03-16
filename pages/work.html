@@ -1,6 +1,7 @@
 <link type="text/css" rel="stylesheet" href="./js/lightgallery/css/lightgallery.css" />
 <style type="text/css">
   /* Start our work*/
+
   .page-our-work {
     position:relative;
     padding: 0 0px;
@@ -331,7 +332,12 @@
     }
 
 
+  }
 
+  @media screen and (min-width: 960px){
+    .app-description {
+      margin-bottom: 20px;
+    }
   }
   /*End our work*/
 </style>
@@ -408,10 +414,10 @@
              <div class="app-stats"><span class="stats-number">2155 </span><span class="stats-desc">lines</span></div>
            </li>
         </ul>
-        <ul class="btn-control-group">
-          <li class="btn btn-secondary">Appstore</li>
-          <li class="btn btn-secondary">Playmarket</li>
-        </ul>
+        <div>
+        <a class="btn btn-secondary" href="https://itunes.apple.com/app/clashot/id572266787" target="_blank">Appstore</a>
+        <a class="btn btn-secondary" href="https://play.google.com/store/apps/details?id=com.depositphotos.clashot" target="_blank">Playmarket</a>
+        </div>
       </div>
     </div>
   </div>
@@ -453,14 +459,20 @@
                 '<div class="app-stats"><span class="stats-number">2155 </span><span class="stats-desc">lines</span></div>' +
               '</li>' +
             '</ul>' +
-        '<ul class="btn-control-group">'+
-          '<li class="btn btn-secondary">Appstore</li>'+
-          '<li class="btn btn-secondary">Playmarket</li>'+
-        '</ul>'+
+        generateProjectLinks(project.linksData) +
       '</div>'+
     '</div>'+
   '</div>';
   return template;
+  };
+
+  function generateProjectLinks(linksData){
+    var links = '<div>';
+    $.each( linksData, function( key, value ) {
+      links += '<a class="btn btn-secondary" href="' + value + '" target="_blank">' + key + '</a>';
+    });
+    links += '</div>';
+    return links;
   };
 
   function generateProjectImages(imagesData){
@@ -494,6 +506,10 @@
        {
         title: 'Clashot',
         description: 'Clashot is a photobank in your pocket, that helps you to earn money by taking photos and selling them online. No need to agonize over looking for subjects and objects for your photos: in this app, you can always look at what your friends and other Clashot users are shooting, as well as look through photos deemed the best and most popular.',
+        linksData: {
+          Appstore: 'https://itunes.apple.com/app/clashot/id572266787',
+          Playmarket: 'https://play.google.com/store/apps/details?id=com.depositphotos.clashot'
+        },
          imagesData: {
            baseAddress: './img/apps/Clashot/',
            imagesList: {
@@ -510,6 +526,10 @@
       }, {
         title: 'Cluise',
         description: 'Cluise is a personal stylist that digitizes your wardrobe and creates smart day-to-day looks analyzing your preferences and the real-time weather.',
+        linksData: {
+          Appstore: 'https://itunes.apple.com/app/cluise/id860000213',
+          Playmarket: 'https://play.google.com/store/apps/details?id=com.cluise'
+        },
         imagesData: {
            baseAddress: './img/apps/Cluise/',
            imagesList: {
@@ -526,6 +546,10 @@
       }, {
         title: 'Photobank',
         description: "Millions of professional royalty-free stock photos, vector images and videos. Smart & elegant user interface finds the right file fast. Use intuitive finger swipes to browse through the archive. Hi-res preview images – know exactly what you're downloading. Use favorites to save and organize files you like. Depositphotos' image library is constantly refreshed, growing by thousands of files daily. Our developers took part of the maintaining and supporting of this project.",
+        linksData: {
+          Appstore: 'https://itunes.apple.com/app/depositphotos/id919098408',
+          Playmarket: 'https://play.google.com/store/apps/details?id=com.depositphotos.root'
+        },
         imagesData: {
            baseAddress: './img/apps/Photobank/',
            imagesList: {
@@ -538,6 +562,10 @@
       }, {
         title: 'Rebus',
         description: 'We love mind games, stylish graphics, and crisp insanity. This application is for such freaks as we are.',
+        linksData: {
+          Appstore: 'https://itunes.apple.com/us/app/rebus-absurd-logic-game/id966536279',
+          Playmarket: 'https://play.google.com/store/apps/details?id=com.jutiful.rebus.en'
+        },
         imagesData: {
            baseAddress: './img/apps/Rebus/',
            imagesList: {
@@ -552,6 +580,10 @@
       }, {
         title: 'City Taxi',
         description: 'City Taxt is the first and only taxi app in Khmelnitsky. Small but smart, effective and accurate, it delivers the best experience for relieble ridesharing.',
+        linksData: {
+          Appstore: '#',
+          Playmarket: 'https://play.google.com/store/apps/details?id=com.citytaxi.client'
+        },
         imagesData: {
            baseAddress: './img/apps/City Taxi/',
            imagesList: {
@@ -564,6 +596,10 @@
       }, {
         title: 'Mobile Hero',
         description: 'MobileHero is a geo-located, on-demand task outsourcing app. It let?s you instantly connect with safe and reliable help to get any job done. Hire vetted, community-rated professionals in your area all from the convenience of your phone. Manage your job on the go and get real-time updates from your Hero about the status of your job. Rate your hero at the end to help keep our community of earners top-notch.',
+        linksData: {
+          Appstore: '#',
+          Playmarket: '#'
+        },
         imagesData: {
            baseAddress: './img/apps/Mobile Hero/',
            imagesList: {
@@ -578,6 +614,10 @@
       }, {
         title: 'ROYAVR',
         description: 'Virtual reality tours are made for the best presentation of the real estate properties. Real Estate Agents may use it to share virtual reality experience with their clients.',
+        linksData: {
+          Appstore: 'https://itunes.apple.com/ua/app/royavr/id1162126192',
+          Playmarket: 'https://play.google.com/store/apps/details?id=com.royavr.acer.openvr'
+        },
         imagesData: {
          baseAddress: './img/apps/ROYAVR/',
          imagesList: {
