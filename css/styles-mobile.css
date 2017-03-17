@@ -27,7 +27,7 @@ header.main {
   max-width: 100%;
 }
 
-.btn-hire {
+a.btn-hire {
   display: initial;
   position: absolute;
   right: 25px;
@@ -39,6 +39,17 @@ header.main {
   padding: 0;
   top: 50%;
   transform: translateY(-50%);
+}
+
+a.btn-hire:focus {
+  color: rgb(237, 103, 58);
+  text-decoration: none;
+}
+
+a.btn-hire:visited, a.btn-hire:hover{
+  color: rgb(237, 103, 58);
+  text-decoration: none;
+  outline: none;
 }
 
 header.menu {
