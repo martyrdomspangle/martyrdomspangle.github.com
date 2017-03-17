@@ -288,6 +288,10 @@ header.menu a.selected {
   margin-right: 20px;
 }
 
+.btn-container {
+  text-align: center;
+}
+
 .page .btn-secondary {
   background: rgba(255, 255, 255, 0.2) !important;
 }

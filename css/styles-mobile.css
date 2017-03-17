@@ -136,3 +136,9 @@ section.wrapper section {
 .page .btn {
   font-size: 10pt;
 }
+
+a.btn {
+  width: 130px;
+  margin: 0 5px;
+  padding: 11px 0;
+}

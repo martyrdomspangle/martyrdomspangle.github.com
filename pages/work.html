@@ -414,8 +414,8 @@
              <div class="app-stats"><span class="stats-number">2155 </span><span class="stats-desc">lines</span></div>
            </li>
         </ul>
-        <div>
-        <a class="btn btn-secondary" href="https://itunes.apple.com/app/clashot/id572266787" target="_blank">Appstore</a>
+        <div class="btn-container">
+        <a class="btn btn-secondary btn-first" href="https://itunes.apple.com/app/clashot/id572266787" target="_blank">Appstore</a>
         <a class="btn btn-secondary" href="https://play.google.com/store/apps/details?id=com.depositphotos.clashot" target="_blank">Playmarket</a>
         </div>
       </div>
@@ -467,7 +467,7 @@
   };
 
   function generateProjectLinks(linksData){
-    var links = '<div>';
+    var links = '<div class="btn-container">';
     $.each( linksData, function( key, value ) {
       links += '<a class="btn btn-secondary" href="' + value + '" target="_blank">' + key + '</a>';
     });
