@@ -338,6 +338,12 @@ a.btn {
   color: rgb(237, 103, 58);
 }
 
+.btn-secondary:focus, a.btn-secondary:focus {
+  color: rgb(237, 103, 58);
+  text-decoration: none;
+  outline: none;
+}
+
 @media (max-width: 1320px) {
   .page-home ul.labels {
     width: 90%;
