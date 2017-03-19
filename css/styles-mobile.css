@@ -104,7 +104,9 @@ section.wrapper section {
 }
 
 .page-home {
-  max-width: calc(100% - 30px) !important;
+  width: 100%;
+  max-width: 100% !important;
+  padding: 0 5%;
 }
 
 .page-home ul.labels {
@@ -124,14 +126,21 @@ section.wrapper section {
 
 .info-container {
   width: 65%;
+  padding-top: 1%;
 }
 
 .info-container h3 {
-  margin-top: 0;
+  margin: 0 0 5px;
+}
+
+.info-container > h3 {
+  font-size: 14px;
 }
 
 .info-container p {
   margin-bottom: 0;
+  font-size: 14px;
+  line-height: 1.4;
 }
 
 .btn-control-group li {
@@ -156,4 +165,8 @@ a.btn {
 
 a.btn-first {
   margin-right: 6.5%;
+}
+
+.page-home .btn-control-group {
+  margin-top: 50px;
 }
