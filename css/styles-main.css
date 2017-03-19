@@ -25,8 +25,6 @@ body {
   height: 100%;
   width: 100%;
   position: absolute;
-  background: url('/img/bgr_main.jpg') no-repeat fixed !important;
-  background-size: cover !important;
 }
 
 .mobile-visible {
@@ -36,6 +34,19 @@ body {
 p {
   color: rgb(194, 194, 194);
   font-size: 12pt;
+}
+
+.bgr-img-layer {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: block;
+  height: 100%;
+  background: url('/img/bgr_main.jpg') no-repeat fixed !important;
+  background-size: cover !important;
 }
 
 .bgr-layer {
