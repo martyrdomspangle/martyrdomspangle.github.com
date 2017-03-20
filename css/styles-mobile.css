@@ -1,4 +1,8 @@
 
+html {
+  font-size: calc( 14px + (40 - 14) * (100vw - 320px) / (980 - 320) ) !important;
+}
+
 .mobile-visible {
   display: initial;
 }
