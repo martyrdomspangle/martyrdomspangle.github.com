@@ -113,6 +113,14 @@ section.wrapper section {
   padding: 0 5%;
 }
 
+.page-home .slogan > h1 {
+  font-size: 28px;
+  font-size: 2rem;
+  margin-top: 12px;
+  padding-left: 4%;
+  letter-spacing: 1.3px;
+}
+
 .page-home ul.labels {
   max-width: 100%;
   margin: 25px 0 0;
