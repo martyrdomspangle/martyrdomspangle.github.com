@@ -74,22 +74,33 @@
 
 @media screen and (max-width: 980px) {
   .page-about-us {
-    max-width: calc(100% - 30px);
+    width: 100%;
+    max-width: 100%;
+    padding: 0 5%;
+  }
+
+  .page-about-us .section-title {
+    margin-bottom: 3.1% !important;
   }
 
   .page-about-us ul {
-    margin-top: 15px;
+    margin-top: 0;
   }
 
   .page-about-us li {
     width: 100%;
     margin: 0 !important;
+    padding-top: 8px;
+  }
+
+  .page-about-us ul li + li {
+    padding-top: 8px;
   }
 
   .about-img {
     display: inline-block;
     vertical-align: top;
-    margin-right: 15px;
+    margin-right: 13px;
   }
 
   .about-img img {
@@ -108,12 +119,22 @@
     padding: 0;
   }
 
+  .benefit-heading p {
+    font-size: 13px;
+    font-size: 0.9286rem;
+    letter-spacing: 0.6px;
+    line-height: 1.1;
+    margin: 0;
+  }
+
   .benefit-description {
     padding: 0;
   }
 
   .benefit-description > p {
     font-size: 10pt;
+    padding-top: 3px;
+    line-height: 1.5;
   }
 
   .line-separator {
