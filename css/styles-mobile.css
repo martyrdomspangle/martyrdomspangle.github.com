@@ -123,26 +123,35 @@ section.wrapper section {
 
 .page-home ul.labels {
   max-width: 100%;
-  margin: 25px 0 0;
+  margin: -1px 0 0;
   width: 100%;
 }
 
 .page-home ul.labels li {
   height: auto;
   padding: 0;
+  margin: 0;
+  padding-left: 3%;
+  padding-top: 20px;
+  margin-bottom: 17px;
 }
 
 .page-home ul.labels li + li {
-  margin-top: 30px;
+  padding-top: 5px;
 }
 
 .info-container {
   width: 65%;
-  padding-top: 1%;
+  margin-bottom: 10px;
+}
+
+li + li .info-container {
+  margin-bottom: 0;
 }
 
 .info-container h3 {
-  margin: 0 0 5px;
+  margin: 0;
+  margin-bottom: 3px;
 }
 
 .info-container > h3 {
@@ -152,7 +161,8 @@ section.wrapper section {
 .info-container p {
   margin-bottom: 0;
   font-size: 14px;
-  line-height: 1.4;
+  line-height: 20px;
+  padding-top: 0px;
 }
 
 .btn-control-group li {
