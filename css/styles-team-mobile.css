@@ -12,6 +12,19 @@
 
   .page-team{
     max-width: 100%;
+    padding: 0 5%;
+  }
+
+  .page-team .section-title {
+    margin: 0;
+  }
+
+  .members {
+    padding: 15px 0 0 0;
+  }
+
+  .members > li {
+    margin-bottom: 27px;
   }
 
   .members.grid li p,
@@ -27,11 +40,12 @@
   .avatar-container {
     display: inline-block;
     vertical-align: top;
-    margin: 0 25px;
+    width: 56px;
+    margin: 0 25px 0 8px;
   }
 
   .avatar-container img {
-    width: 60px;
+    max-width: 100%;
   }
 
   .member-info {
@@ -39,9 +53,15 @@
     vertical-align: top;
     width: 65%;
   }
+  .page-team .name {
+    font-size: 12px;
+    letter-spacing: 0.1px;
+  }
 
   .member-info p {
+    font-size: 14px;
     margin: 0;
+    padding-top: 5px;
   }
 
 }
