@@ -179,7 +179,7 @@ li + li .info-container {
 .btn-control-group li {
   width: 46.5%;
   min-width: 46.5%;
-  padding: 10px;
+  padding: 3.82%;
   margin-right: 0;
 }
 .btn-control-group li + li {
@@ -187,13 +187,14 @@ li + li .info-container {
 }
 
 .page .btn {
-  font-size: 10pt;
+  font-size: 13px;
+  font-size: 1rem;
 }
 
 a.btn {
   width: 45.9%;
   margin: 0;
-  padding: 11px 0;
+  padding: 3.82% 0;
 }
 
 a.btn-first {
