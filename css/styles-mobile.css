@@ -116,14 +116,15 @@ section.wrapper section {
 .page-home .slogan > h1 {
   font-size: 28px;
   font-size: 2rem;
-  margin-top: 12px;
+  margin-top: 4.17%;
+  margin-bottom: 3.82%;
   padding-left: 4%;
   letter-spacing: 1.3px;
 }
 
 .page-home ul.labels {
   max-width: 100%;
-  margin: -1px 0 0;
+  margin: 0;
   width: 100%;
 }
 
@@ -132,17 +133,25 @@ section.wrapper section {
   padding: 0;
   margin: 0;
   padding-left: 3%;
-  padding-top: 20px;
-  margin-bottom: 17px;
+  padding-top: 6.94%;
+  margin-bottom: 5.9%;
 }
 
 .page-home ul.labels li + li {
-  padding-top: 5px;
+  padding-top: 1.74%;
+}
+
+.icon {
+  width: 13.89%;
+  height: 13.89%;
+  min-width: 40px;
+  min-height: 40px;
 }
 
 .info-container {
   width: 65%;
-  margin-bottom: 10px;
+  margin-bottom: 5.49%;
+  margin-left: 8.24%;
 }
 
 li + li .info-container {
@@ -151,18 +160,20 @@ li + li .info-container {
 
 .info-container h3 {
   margin: 0;
-  margin-bottom: 3px;
+  margin-bottom: 1.65%;
 }
 
 .info-container > h3 {
   font-size: 14px;
+  font-size: 1rem;
 }
 
 .info-container p {
   margin-bottom: 0;
   font-size: 14px;
-  line-height: 20px;
-  padding-top: 0px;
+  font-size: 1rem;
+  line-height: 1.4286rem;
+  padding-top: 0;
 }
 
 .btn-control-group li {
