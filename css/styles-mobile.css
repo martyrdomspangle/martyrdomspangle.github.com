@@ -96,13 +96,14 @@ section.wrapper section {
 }
 
 .section-title {
-  margin: 45px auto 15px;
+  margin: 15.6% auto 7%;
   text-align: center;
 }
 
 .section-description {
   color: rgb(255, 255, 255) !important;
   font-size: 22px !important;
+  font-size: 1.57rem !important;
   text-transform: uppercase;
 }
 
