@@ -20,7 +20,7 @@ header.main {
   position: absolute;
   float: none;
   padding: 0;
-  width: 65px;
+  width: 20%;
   height: auto;
   margin-left: 3%;
   top: 50%;
@@ -36,9 +36,8 @@ a.btn-hire {
   position: absolute;
   right: 5%;
   color: rgb(237, 103, 58);
-  font-size: 10pt;
+  font-size: 0.95rem;
   text-transform: uppercase;
-  top: 35px;
   font-family: PeaceSans, sans-serif;
   padding: 0;
   top: 50%;
