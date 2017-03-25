@@ -65,3 +65,32 @@ header.menu ul li p {
 .grid > li {
   width: 33.333%;
 }
+
+@media screen and (min-width: 961px) and (max-width: 1279px){
+
+  header.main {
+    height: 100px;
+  }
+
+  .header-container .logo {
+    width: 17%;
+    padding: 36px 0 0 0;
+  }
+
+  header.menu {
+    height: 100px;
+  }
+
+  header.menu ul {
+    padding-left: 278px;
+  }
+
+  header.menu ul li {
+    margin: 0 6% 0 0;
+  }
+
+  header.menu ul li a h3 {
+    padding-top: 6px;
+    font-size: 16px;
+  }
+}
