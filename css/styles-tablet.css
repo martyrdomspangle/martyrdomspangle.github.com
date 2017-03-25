@@ -135,4 +135,20 @@ header.menu ul li p {
     letter-spacing: 1.3px;
   }
 
+  .btn-container {
+    padding: 2% 43% 4.5% 7%;
+  }
+
+  .page .btn {
+    font-size: 15px;
+    width: 215px;
+    margin: 0;
+    padding: 25px 0 20px 0;
+  }
+
+  .page .btn-first {
+    margin-right: 6%;
+  }
+
+
 }
