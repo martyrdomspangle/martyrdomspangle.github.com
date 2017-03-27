@@ -30,7 +30,33 @@
 
 @media screen and (max-width: 1024px) {
 	.page-team {
-		max-width: calc(100% - 100px);
+		max-width: 100%;
 		margin: auto;
 	}
+}
+
+@media screen and (min-width: 961px) and (max-width: 1279px) {
+
+  .members {
+    padding-top: 16px;
+    padding-right: 4%;
+  }
+
+  .members > li {
+    margin: 0 0 54px 0;
+    padding: 0 0 0 11.5%;
+    width: 33%;
+  }
+
+  .page-team .name {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+
+  .member-info p {
+    width: 75%;
+    font-size: 14px;
+  }
+
 }
