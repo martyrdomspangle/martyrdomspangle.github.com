@@ -89,10 +89,24 @@ header.menu ul li p {
     margin: 0 6% 0 0;
   }
 
+  header.menu a.selected {
+    background: none;
+  }
+
+  header.menu a:hover {
+    background: none;
+  }
+
   header.menu ul li a h3 {
     padding-top: 6px;
     font-size: 16px;
+    color: rgb(151, 150, 159);
   }
+
+  header.menu ul li a.selected h3 {
+    color: rgb(255, 255, 255);
+  }
+
 
     /* Home section styles */
 
