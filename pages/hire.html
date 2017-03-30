@@ -14,7 +14,7 @@
 input, textarea {
   color: #21a1e1;
   padding: 0;
-  font-size: 16pt;
+  font-size: 16px;
   display: inline-block;
 }
 
@@ -22,63 +22,97 @@ textarea {
   overflow: hidden;
   word-wrap: break-word;
   resize: none;
+  margin-bottom: 19px;
 }
 
 .input-container {
+  line-height: 1;
   width: 100%;
   display: block;
-  margin: 50px auto;
+  margin: 0;
   margin-right: 20px;
+  padding: 2.1em 0;
+  margin-bottom: 32px;
   position: relative;
 }
 .input-container input, textarea {
+  position: absolute;
+  top: 0;
+  left: 0;
  background: rgba(255, 255, 255, 0);
  border: none;
- border-bottom: solid 2px rgb(137, 137, 137);
  outline:none;
  width: 100%;
  padding: 0;
  color: rgb(255, 255, 255);
 }
+
 .input-container label {
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 0;
-  font-size: 16pt;
+  margin: 0;
+  width: 100%;
+  font-size: 16px;
+  text-transform: uppercase;
   color: rgb(255, 255, 255);
   pointer-events: none;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+  /*-webkit-transform: translateY(-50%);
+  transform: translateY(-50%);*/
 }
 
-.input-container textarea + label {
-  top: 42%;
+.input-container .line-container {
+  position: absolute;
+  top: -0.3em;
+  left: 0;
+  width: 100%;
 }
 
-.input-container input:focus,
-.input-container input.has-value,
-.input-container textarea:focus,
-.input-container textarea.has-value{
-  border-bottom: 2px solid rgb(237, 103, 58);
+.bottom-line {
+  width: 100%;
+  height: 2px;
+  background-color: rgb(137, 137, 137);
+}
+
+.line-container textarea, .line-container .bottom-line {
+  position: relative;
+}
+
+.input-container input:focus ~ .bottom-line,
+.input-container input.has-value ~ .bottom-line,
+.input-container textarea:focus ~ .bottom-line,
+.input-container textarea.has-value ~ .bottom-line {
+  background-color: #ed673a !important;
 }
 
 .input-container input:focus + label,
 .input-container input.has-value + label,
 .input-container textarea:focus + label,
 .input-container textarea.has-value + label {
-  top: -10px;
-  font-size: 12pt;
+  top: -2em;
+  font-size: 12px;
   color: rgb(115, 108, 124);
+}
 
+.input-container .line-container:focus + label,
+.input-container .line-container.has-value + label {
+  top: -2em;
+}
+
+.input-container .label-moved-up {
+  top: -2em;
+  font-size: 12px;
+  color: rgb(115, 108, 124);
 }
 
 .validation-error-text{
  position: absolute;
- font-size: 14pt;
+ font-size: 14px;
+ letter-spacing: 0.1px;
  color: rgb(237, 103, 58);
- margin: 10px 0 0;
+ margin: 5px 0 0 0;
 }
 
 @media screen and (max-width: 980px) {
@@ -116,9 +150,12 @@ textarea {
 
 .project-form {
   display: block;
+  margin-top: 61px;
     margin-right: 3%;
     width: 100%;
     margin-bottom: 40px;
+    padding-top: 3px;
+    padding-left: 3px;
 }
 
 .project-form {
@@ -167,6 +204,43 @@ textarea {
   }
 }
 
+@media screen and (min-width: 1280px) {
+    .page-hire-us {
+      padding: 120px 0 0 18%;
+    }
+
+    .hireus-signform {
+      margin: 0;
+      padding: 10px 0 0 9px;
+      width: 100%;
+      max-width: 600px;
+    }
+
+    .signform-header {
+      margin: 0;
+      padding: 0;
+    }
+
+    .signform-header > p {
+      margin: 0;
+    }
+
+    .project-form {
+      margin: 0;
+      margin-top: 62px;
+      width: 100%;
+    }
+
+    .hireus-signform .btn-control-group {
+      margin: 75px 0 0 0;
+    }
+
+    .hireus-signform .btn-control-group .btn {
+      min-width: 215px;
+    }
+
+  }
+
 </style>
 <section class="page page-hire-us" id="hire">
 <div class="hireus-signform">
@@ -176,15 +250,19 @@ textarea {
       <div class="input-container">
          <input type="text" id="email-input">
          <label>E-mail</label>
+         <div class="bottom-line"></div>
       </div>
       <div class="input-container">
+      <div class="line-container">
       <textarea rows="1" id="about-project-input"></textarea>
+      <div class="bottom-line"></div>
+      </div>
       <label>A few lines about your project</label>
       </div>
-      <ul class="btn-control-group">
-      <li class="btn"><button type="submit">Submit</button></li>
-      <li class="btn btn-secondary"><button type="button">Estimate costs</button></li>
-      </ul>
+      <div class="btn-container">
+      <button class="btn btn-first" type="submit">Submit</button>
+      <button class="btn btn-secondary" type="button">Estimate costs</button>
+      </div>
    </form>
 </div>
 <script type="text/javascript">
@@ -240,7 +318,7 @@ textarea {
       }
     });
     autosize(document.getElementById('about-project-input'));
-    $('.project-form .input-container input, .project-form .input-container textarea ').focusout(function() {
+    $('.project-form .input-container input').focusout(function() {
       var value = $(this).val();
       if (!value) {
         $(this).removeClass('has-value');
@@ -248,6 +326,20 @@ textarea {
         $(this).addClass('has-value');
       }
     });
+
+    $('.project-form .input-container textarea').focus(function(){
+      $(this).parent().siblings('label').addClass('label-moved-up');
+    });
+
+    $('.project-form .input-container textarea').focusout(function() {
+      var value = $(this).val();
+      if (!value) {
+        $(this).parent().siblings('label').removeClass('label-moved-up');
+      } else {
+        $(this).parent().siblings('label').addClass('label-moved-up');
+      }
+    });
+
   });
 </script>
 </section>

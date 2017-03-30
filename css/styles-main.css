@@ -324,7 +324,7 @@ header.menu a.selected {
   outline: none;
 }
 
-a.btn {
+a.btn, button.btn {
   background: rgb(237, 103, 58);
   border: none;
   border-radius: 0;
