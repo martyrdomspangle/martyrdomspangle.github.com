@@ -360,3 +360,38 @@ a.btn {
     width: 90%;
   }
 }
+
+@media screen and (min-width: 1280px) {
+  .body-container {
+    width: 100%;
+    height: 100%;
+    max-width: 1680px;
+    max-height: 946px;
+  }
+
+  .header-container {
+    min-height: 125px;
+  }
+
+  .logo {
+    height: 114px;
+    width: 20%;
+    padding: 64px 0 0 109px;
+    text-align: initial;
+  }
+
+  .logo img {
+    max-width: 100%;
+  }
+
+  .header-container .social-icons {
+    width: 13.4%;
+    top: 70px;
+    text-align: initial;
+  }
+
+  .social-icons > li {
+    margin-right: 17px;
+  }
+  
+}
