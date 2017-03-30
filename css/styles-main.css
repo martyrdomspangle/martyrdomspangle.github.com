@@ -393,5 +393,36 @@ a.btn {
   .social-icons > li {
     margin-right: 17px;
   }
+
+  header.menu {
+    width: 18%;
+  }
+
+  header.menu ul {
+    margin: 0;
+    padding: 51px 0 0 30%;
+  }
+
+  header.menu ul li {
+    padding: 0;
+    width: 200px;
+  }
+
+  header.menu a {
+    height: auto;
+    padding: 21px 0 18px 22px;
+  }
+
+  header.menu h3 {
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+
+  header.menu p {
+    width: 80%;
+    font-size: 16px;
+  }
+
   
 }
