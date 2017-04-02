@@ -115,26 +115,7 @@ textarea {
  margin: 5px 0 0 0;
 }
 
-@media screen and (max-width: 980px) {
 
-  .page-hire-us {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-  }
-
-  .page-hire-us .signform-header > p {
-    font-size: 22px;
-    font-size: 1.57rem;
-    letter-spacing: 0.1px;
-    line-height: 1.3;
-    margin: 0;
-  }
-
-  .input-container label {
-    font-size: 14pt;
-  }
-}
 
 .hireus-signform {
   margin: 0 auto;
@@ -164,6 +145,56 @@ textarea {
 
 .project-form .btn-control-group {
   margin-bottom: 50px;
+}
+
+@media screen and (max-width: 980px) {
+
+  .page-hire-us {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .hireus-signform {
+    padding: 0 4%;
+  }
+
+  .project-form {
+    margin: 25px 0 0 0;
+    padding: 0;
+  }
+
+  .page-hire-us .signform-header > p {
+    font-size: 22px;
+    font-size: 1.57rem;
+    letter-spacing: 0.1px;
+    line-height: 1.3;
+    margin: 0;
+  }
+
+  .input-container {
+    margin-bottom: 3px;
+    padding: 2.5em 0;
+  }
+
+  .input-container input,
+  .input-container textarea,
+  .input-container label {
+    font-size: 14px;
+  }
+
+  .input-container input:focus + label, .input-container input.has-value + label, .input-container textarea:focus + label, .input-container textarea.has-value + label {
+    top: -1.3em;
+  }
+
+  .input-container .label-moved-up {
+    top: -1.3em;
+  }
+
+  .validation-error-text {
+    font-size: 12px;
+  }
+
 }
 
 @media screen and (min-width: 660px) {
