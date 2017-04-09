@@ -189,6 +189,8 @@ li + li .info-container {
 .page .btn {
   font-size: 12px;
   font-size: 0.8571rem;
+  line-height: 1;
+  padding: 1.0357rem 0;
 }
 
 a.btn, button.btn {
