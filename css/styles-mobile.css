@@ -150,12 +150,8 @@ section.wrapper section {
 
 .info-container {
   width: 65%;
-  margin-bottom: 5.49%;
-  margin-left: 8.24%;
-}
-
-li + li .info-container {
   margin-bottom: 0;
+  margin-left: 8.24%;
 }
 
 .info-container h3 {
