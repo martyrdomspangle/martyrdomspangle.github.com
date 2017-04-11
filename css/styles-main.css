@@ -36,6 +36,15 @@ p {
   font-size: 12pt;
 }
 
+.gray-text {
+  color: rgb(194, 194, 194);
+}
+
+.orange-underlined {
+  color: rgb(237, 103, 58);
+  text-decoration: underline;
+}
+
 .bgr-img-layer {
   content: '';
   position: absolute;

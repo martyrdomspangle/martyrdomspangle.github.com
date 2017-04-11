@@ -23,6 +23,14 @@ $(document).ready(function () {
       }
     });
 
+  $('.wrapper').on('click', '.desc-more', function(event){
+    event.preventDefault();
+    this.parentNode.style.height = 'auto';
+    this.nextSibling.style.display='inline';
+    this.style.display='none';
+    return false;
+  });
+
   setInterval(swapImages, 2e3);
 });
 

@@ -221,6 +221,7 @@
       top: 10%;
       left: 5%;
       width: 90%;
+      height: auto;
     }
 
     .app-wrapper {
@@ -249,6 +250,20 @@
       line-height: 1.3em;
       overflow: hidden;
       margin: 3.82% 0 0;
+    }
+
+    a.desc-more {
+      font-family: inherit;
+      font-size: 14px;
+      font-size: 1rem;
+    }
+
+    a.desc-more:hover {
+      text-decoration: none;
+    }
+
+    .full-desc {
+      display: none;
     }
 
     .description-wrapper li {
@@ -537,7 +552,7 @@
        <div app>
          <h1 class="app-title">Clashot</h1>
          <p class="app-description">
-           Clashot is a photobank in your pocket, that helps you to earn money by taking photos and selling them online. No need to agonize over looking for subjects and objects for your photos: in this app, you can always look at what your friends and other Clashot users are shooting, as well as look through photos deemed the best and most popular.
+           <span class="preview-desc">Clashot is a photobank in your pocket, that helps you to earn money by taking photos and selling them online. No need to</span><a class="desc-more" href="/#work"><span class="gray-text">...</span><span class="orange-underlined">more...</span></a><span class="full-desc"> agonize over looking for subjects and objects for your photos: in this app, you can always look at what your friends and other Clashot users are shooting, as well as look through photos deemed the best and most popular.</span>
          </p>
          <ul class="app-description">
           <li>
@@ -582,7 +597,7 @@
        '<div app>'+
          '<h1 class="app-title">' + project.title + '</h1>'+
          '<p class="app-description">'+
-           project.description +
+           generateProjectDescription(project.description) +
          '</p>'+
             '<ul class="app-description">' +
               '<li>' +
@@ -617,6 +632,22 @@
     links += '</div>';
     return links;
   };
+
+  function generateProjectDescription(description) {
+    //findIndexPosition finds first occurance of specific character after spefic index
+    function findIndexPosition(rawDataString, toFind, position) {
+      var i = (rawDataString + '').indexOf(toFind, (position || 0));
+      return i === -1 ? -1 : i;
+    }
+    var endOfPreviewIndex = findIndexPosition(description, ' ', 118);
+    if(~endOfPreviewIndex){
+      var previewDescription = '<span class="preview-desc">' + description.substr(0, endOfPreviewIndex) + '</span>';
+      previewDescription += '<a class="desc-more" href="/#work"><span class="gray-text">...</span><span class="orange-underlined">more...</span></a>';
+      previewDescription += '<span class="full-desc">' + description.substr(endOfPreviewIndex) + '</span>';
+      return previewDescription;
+    }
+    return description;
+  }
 
   function generateProjectImages(imagesData){
     var baseAddress = imagesData.baseAddress;
