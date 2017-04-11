@@ -266,6 +266,18 @@
       display: none;
     }
 
+    .full-desc-visible p.app-description {
+      height: auto;
+    }
+
+    .full-desc-visible p.app-description a.desc-more {
+      display: none;
+    }
+
+    .full-desc-visible p.app-description span.full-desc {
+      display: inline;
+    }
+
     .description-wrapper li {
       width: 32%;
       vertical-align: top;
@@ -673,7 +685,12 @@
       slideSpeed : 2000,
       loop: true,
       mouseDrag: false,
-      nav: true
+      nav: true,
+      onTranslated: function(property){
+        var index = property.item.index;
+        var current = $(property.target).find(".owl-item").eq(index);
+        current.prev().removeClass('full-desc-visible');
+      }
     });
 
     var projects = [
