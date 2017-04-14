@@ -210,6 +210,35 @@ header.menu a.selected {
   background: url(/img/bgr_nav_selected.png) no-repeat;
 }
 
+footer {
+  position: relative;
+  padding: 2px 0 0 12px;
+}
+
+footer .footer-copyright {
+  float: left;
+  width: 50%;
+}
+
+footer .footer-copyright > p {
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+footer .social-icons {
+  float: left;
+  width: 50%;
+  padding: 4px 0 0 7px;
+}
+
+footer .social-icons > li {
+  margin: 0;
+}
+
+footer .social-icons > li + li {
+  margin-left: 7px;
+}
+
 .page h1 {
   font-family: PeaceSans, sans-serif;
   color: rgb(237, 103, 58);
