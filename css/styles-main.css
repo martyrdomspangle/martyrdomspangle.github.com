@@ -252,6 +252,23 @@ footer .social-icons li i {
   padding: 0;
 }
 
+footer .social-icons li a img {
+  width: 100%;
+  max-width: 100%;
+}
+
+footer .social-icons li .icon-vk:before {
+  content: none;
+}
+
+footer .social-icons li .icon-facebook:before {
+  content: none;
+}
+
+footer .social-icons li .icon-twitter:before {
+  content: none;
+}
+
 .page h1 {
   font-family: PeaceSans, sans-serif;
   color: rgb(237, 103, 58);
