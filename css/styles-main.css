@@ -212,7 +212,7 @@ header.menu a.selected {
 
 footer {
   position: relative;
-  padding: 2px 4% 0 4%;
+  padding: 0.625% 4% 0;
 }
 
 footer .footer-copyright {
@@ -223,12 +223,14 @@ footer .footer-copyright {
 footer .footer-copyright > p {
   color: #878894;
   font-size: 13px;
+  font-size: 0.928571rem;
   line-height: 1.65;
 }
 
 footer .social-icons {
   float: right;
   padding: 4px 0 0 0;
+  padding: 0.285714rem 0 0 0;
 }
 
 footer .social-icons > li {
@@ -236,11 +238,14 @@ footer .social-icons > li {
   display: block;
   float: left;
   width: 28px;
+  width: 2rem;
   height: 32px;
+  height: 2.285714rem;
 }
 
 footer .social-icons > li + li {
   margin-left: 22px;
+  margin-left: 1.571428rem;
 }
 
 footer .social-icons li i {
