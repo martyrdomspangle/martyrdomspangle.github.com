@@ -382,6 +382,11 @@ transition: all 0.2s ease;*/
           error: function (responseData, textStatus, errorThrown) {
           }
         });
+
+        var loadingSpinner = '<div id="loading-spinner"></div><span class="checkmark-icon"></span>';
+        $(this).closest('.hireus-signform').empty().append(loadingSpinner);
+        $('#loading-spinner').spinner({radius: 50, color: '#ed673a'});
+
       } else return false;
     });
 
