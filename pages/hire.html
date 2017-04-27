@@ -288,6 +288,51 @@ transition: all 0.2s ease;*/
 
 <script type="text/javascript">
 
+function drawSuccessCheckmark() {
+var vas = document.getElementsByTagName('canvas')[0];
+var ctx = document.getElementsByTagName('canvas')[0].getContext('2d');
+var canvasWidth = vas.width;
+var canvasHeight = vas.height;
+var width = 10;
+var startX = 20;
+var startY = 30;
+var midX = 40;
+var midY = 50;
+var endX = 75;
+var endY = 5;
+var leftX = startX;
+var leftY = startY;
+var rightX = midX;
+var rightY = midY;
+var animationSpeed = 20;
+
+ctx.lineWidth = width;
+ctx.strokeStyle = 'rgba(237, 103, 58, 1)';
+
+for (i = startX; i < midX; i++) {
+    var drawLeft = window.setTimeout(function () {
+        ctx.beginPath();
+        ctx.moveTo(startX, startY);
+        ctx.lineTo(leftX, leftY);
+        ctx.lineCap = 'round';
+        ctx.stroke();
+        leftX++;
+        leftY++;
+    }, 1 + (i * animationSpeed) / 3);
+}
+
+for (i = midX; i < endX; i++) {
+    var drawRight = window.setTimeout(function () {
+        ctx.beginPath();
+        ctx.moveTo(leftX, leftY);
+        ctx.lineTo(rightX, rightY);
+        ctx.stroke();
+        rightX++;
+        rightY--;
+    }, 1 + (i * animationSpeed) / 3);
+}
+  };
+
   function elementHasClass(el, className) {
     if (el.classList)
       return el.classList.contains(className);
@@ -384,7 +429,9 @@ transition: all 0.2s ease;*/
         });
 
         var loadingSpinner = '<div id="loading-spinner"></div><span class="checkmark-icon"></span>';
-        $(this).closest('.hireus-signform').empty().append(loadingSpinner);
+        var success = '<div class="email-status-result" style="width: 85%; margin: 0 auto;"><canvas height="60" width="80" id="checkmark-success"></canvas><p class="orange-text">Success</p><p>We will reach out to you shortly.</p></div>';
+        $(this).closest('.hireus-signform').empty().append(success);
+        drawSuccessCheckmark();
         $('#loading-spinner').spinner({radius: 50, color: '#ed673a'});
 
       } else return false;
