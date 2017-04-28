@@ -422,18 +422,23 @@ for (i = midX; i < endX; i++) {
           crossDomain: true,
           data: serializedForm,
           dataType: 'json',
+          beforeSend: function(){
+            // Fires before sending request so loading placeholder is put here
+            var loadingSpinner = '<div id="loading-spinner"></div>';
+            $($form).closest('.hireus-signform').empty().append(loadingSpinner);
+            $('#loading-spinner').spinner({radius: 50, color: '#ed673a'});
+          },
           success: function (responseData, textStatus, jqXHR) {
+            var success = '<div class="email-status-result" style="width: 85%; margin: 0 auto;"><canvas height="60" width="80" id="checkmark-success"></canvas><p class="orange-text">Success</p><p>We will reach out to you shortly.</p></div>';
+            $('.hireus-signform').empty().append(success);
+            drawSuccessCheckmark();
           },
           error: function (responseData, textStatus, errorThrown) {
+            alert('Something gone wrong');
           }
         });
-
-        var loadingSpinner = '<div id="loading-spinner"></div><span class="checkmark-icon"></span>';
-        var success = '<div class="email-status-result" style="width: 85%; margin: 0 auto;"><canvas height="60" width="80" id="checkmark-success"></canvas><p class="orange-text">Success</p><p>We will reach out to you shortly.</p></div>';
-        $(this).closest('.hireus-signform').empty().append(success);
-        drawSuccessCheckmark();
-        $('#loading-spinner').spinner({radius: 50, color: '#ed673a'});
-
+        
+        
       } else return false;
     });
 
