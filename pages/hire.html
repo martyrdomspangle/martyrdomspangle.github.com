@@ -137,8 +137,39 @@ transition: all 0.2s ease;*/
 }
 
 .hireus-signform .btn-container {
-  margin-bottom: 20px;
   padding-top: 1.36%;
+}
+
+#loading-spinner {
+  width: 35%;
+  margin: 0 auto;
+  padding: 15% 0 0;
+}
+
+.email-status-result {
+  width: 85%;
+  margin: 0 auto;
+  padding: 25% 0 0;
+}
+
+#checkmark-success {
+  display: block;
+  margin: 0 auto;
+}
+
+.email-status-result p.email-status {
+  font-size: 22px;
+  text-align: center;
+  margin: 8px 0 0;
+}
+
+.email-status-result p.email-status-description {
+  font-family: ProximaNova;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  text-align: center;
+  text-transform: none;
 }
 
 @media screen and (max-width: 980px) {
@@ -155,7 +186,7 @@ transition: all 0.2s ease;*/
   }
 
   .hireus-signform {
-    padding: 0 4.6%;
+    padding: 0 4.6% 6.25%;
   }
 
   .project-form {
@@ -268,7 +299,7 @@ transition: all 0.2s ease;*/
 <h1 class="signform-header"><p><span class="orange-text">Start your project</span></p>
 <p><span class="white-text">right now!</span></p></h1>
   <div>
-    <form id="clientProjectForm" action="http://localhost:8080/email-dispatcher" method="POST">
+    <form id="clientProjectForm" action="http://89.252.4.100:8080/email-dispatcher" method="POST">
       <div class="input-container">
         <input id="email-input" type="text" class="material-input" name="customers-email">
         <label for="email-input">E-mail</label>
@@ -425,16 +456,18 @@ for (i = midX; i < endX; i++) {
           beforeSend: function(){
             // Fires before sending request so loading placeholder is put here
             var loadingSpinner = '<div id="loading-spinner"></div>';
+            var containerHeight = $($form).closest('.hireus-signform').height();
+            $($form).closest('.hireus-signform').height(containerHeight);
             $($form).closest('.hireus-signform').empty().append(loadingSpinner);
             $('#loading-spinner').spinner({radius: 50, color: '#ed673a'});
           },
           success: function (responseData, textStatus, jqXHR) {
-            var success = '<div class="email-status-result" style="width: 85%; margin: 0 auto;"><canvas height="60" width="80" id="checkmark-success"></canvas><p class="orange-text">Success</p><p>We will reach out to you shortly.</p></div>';
+            var success = '<div class="email-status-result"><canvas height="60" width="80" id="checkmark-success"></canvas><p class="orange-text email-status">Success</p><p class="email-status-description">We will reach out to you shortly.</p></div>';
             $('.hireus-signform').empty().append(success);
             drawSuccessCheckmark();
           },
           error: function (responseData, textStatus, errorThrown) {
-            alert('Something gone wrong');
+            // Something gone wrong
           }
         });
         
