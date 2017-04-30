@@ -27,6 +27,10 @@ body {
   position: absolute;
 }
 
+.visibility-hidden {
+  visibility: hidden !important;
+}
+
 .mobile-visible {
   display: none;
 }
