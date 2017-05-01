@@ -1,9 +1,17 @@
 $(document).ready(function () {
   var menu = $('header.menu a');
+  var sectionsPath = {
+    home: '.section-home',
+    about: '.section-about-us',
+    team: '.section-team',
+    work: '.section-our-work',
+    hire: '.section-hire-us'
+  };
   Promise.all(menu.map(function(_, anchor) {
     const pageName = $(anchor).attr('href').substring(1);
-
-    return $.get('/pages/' + pageName + '.html').then(function(html) { $('.wrapper').append(html); });
+    return $.get('/pages/' + pageName + '.html', function(html){
+      $(sectionsPath[pageName]).append(html);
+    })
   })).then(function(r) {
     location.hash = location.hash || 'home';
     setActive.call($('a[href="' + location.hash + '"]').first().get(), null, location.hash);
@@ -40,7 +48,7 @@ function setActive(e, id) {
   $(this).addClass('selected');
 
   // hide all
-  $('.wrapper > section').each(function () {
+  $('.wrapper section').each(function () {
     $(this).hide();
   });
 
