@@ -1,5 +1,6 @@
 $(document).ready(function () {
   var menu = $('header.menu a');
+
   var sectionsPath = {
     home: '.section-home',
     about: '.section-about-us',
@@ -7,7 +8,8 @@ $(document).ready(function () {
     work: '.section-our-work',
     hire: '.section-hire-us'
   };
-  Promise.all(menu.map(function(_, anchor) {
+
+ /* Promise.all(menu.map(function(_, anchor) {
     const pageName = $(anchor).attr('href').substring(1);
     return $.get('/pages/' + pageName + '.html', function(html){
       $(sectionsPath[pageName]).append(html);
@@ -16,8 +18,41 @@ $(document).ready(function () {
     location.hash = location.hash || 'home';
     setActive.call($('a[href="' + location.hash + '"]').first().get(), null, location.hash);
     menu.click(setActive);
+  });*/
+  //////
+
+  //$.get('/pages' + pageName + '.html').done(function(html){
+    //$(sectionsPath[pageName]).append(html);
+  //});
+
+  function requestDeferredPages(namesArray){
+    var deferredPages = [];
+    $.each(namesArray, function(index, value){
+      deferredPages.push(
+        $.get('/pages/' + value + '.html').done(function(html){
+          $(sectionsPath[value]).append(html);
+        })
+        );
+    });
+    return deferredPages;
+  };
+
+  var hrefNames = [];
+
+  $.map(menu, function(anchor){
+    var pageName = $(anchor).attr('href').substring(1);
+    hrefNames.push(pageName);
   });
 
+  var deferredHTMLData = requestDeferredPages(hrefNames);
+  $.when.apply(null, deferredHTMLData).done(function(r){
+    alert('done!');
+    location.hash = location.hash || 'home';
+    setActive.call($('a[href="' + location.hash + '"]').first().get(), null, location.hash);
+    menu.click(setActive);
+  });
+
+  //////
     $('body').on('click', 'a[href*="#"]:not([href="#"])', function() {
       if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
         var target = $(this.hash);
