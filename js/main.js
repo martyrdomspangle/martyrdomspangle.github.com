@@ -46,7 +46,6 @@ $(document).ready(function () {
 
   var deferredHTMLData = requestDeferredPages(hrefNames);
   $.when.apply(null, deferredHTMLData).done(function(r){
-    alert('done!');
     location.hash = location.hash || 'home';
     setActive.call($('a[href="' + location.hash + '"]').first().get(), null, location.hash);
     menu.click(setActive);
