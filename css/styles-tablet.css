@@ -129,6 +129,8 @@ header.menu ul li p {
   }
 
   footer {
+    position: absolute;
+    bottom: 0;
     width: 100%;
     padding: 1.8554% 3.5%;
   }
