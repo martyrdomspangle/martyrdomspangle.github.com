@@ -128,6 +128,41 @@ header.menu ul li p {
     color: rgb(237, 103, 58);
   }
 
+  footer {
+    width: 100%;
+    padding: 1.8554% 3.5%;
+  }
+
+  footer .footer-copyright {
+    width: 25%;
+  }
+
+  footer .footer-copyright p {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    margin: 0;
+    padding: 3.3195% 0 0;
+  }
+
+  footer .footer-copyright p br {
+    display: none;
+  }
+
+  footer .social-icons {
+    width: 16.5%;
+    margin: 0;
+    padding: 0;
+  }
+
+  footer .social-icons > li {
+    width: 22%;
+    height: 16%;
+  }
+
+  footer .social-icons li + li {
+    margin-left: 16%;
+  }
+
     /* Home section styles */
 
   .page-home .slogan {
