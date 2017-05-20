@@ -417,7 +417,8 @@
 
   @media screen and (min-width: 961px) and (max-width: 1279px) {
     .page.page-our-work {
-      padding: 80px 0 0 16px;
+      max-width: 100%;
+      padding: 70px 0;
     }
 
     .owl-carousel {
@@ -425,34 +426,62 @@
       height: 660px;
     }
 
+    .owl-carousel.owl-loaded {
+      width: 100%;
+      height: auto;
+    }
+
+    .project-wrapper {
+      padding: 0 7.5% 0 6.5%;
+    }
+
     .app-wrapper {
-      margin-right: 4.6%;
+      display: initial;
+      float: left;
+      margin-right: 5.6%;
+      width: 28.5%;
+    }
+
+    .work-iphone {
+      width: 90%;
     }
 
     .media-slide {
-      width: 220px;
+      width: 200px;
+      height: 360px;
+      top: 50px;
+      left: 13px;
     }
 
     .description-wrapper {
-      width: 59%;
-      padding-top: 19px;
+      display: initial;
+      float: left;
+      width: 65.9%;
+      padding-top: 0;
     }
 
     h1.app-title {
       font-size: 52px;
       letter-spacing: 1.4px;
+      margin-top: 0;
     }
 
     p.app-description {
-      margin-top: 30px;
-      height: 180px;
+      margin-top: 20px;
+      margin-bottom: 16px;
+      height: auto;
       font-size: 20px;
       line-height: 1.5;
       overflow: hidden;
     }
 
+    .desc-more {
+      display: none;
+    }
+
     ul.app-description {
-      margin-top: 28px;
+      margin-top: 20px;
+      margin-bottom: 10px;
       margin-left: -9px;
     }
 
@@ -495,12 +524,15 @@
     }
 
     .owl-next {
-      top: 35%;
-      right: 6px;
+      top: 40%;
+      right: 2.5%;
+      width: 40px;
+      height: 40px;
+      background-size: 40px 40px;
     }
 
     .owl-dots {
-      padding-top: 50px;
+      padding-top: 0;
     }
 
   }
@@ -586,6 +618,7 @@
         </div>
       </div>
     </div>
+      <div style="clear: both"></div>
   </div>
 
 </div>
@@ -628,6 +661,7 @@
         generateProjectLinks(project.linksData) +
       '</div>'+
     '</div>'+
+            '<div style="clear: both;"' +
   '</div>';
   return template;
   };
@@ -716,7 +750,7 @@
         }
       }, {
         title: 'Photobank',
-        description: "Millions of professional royalty-free stock photos, vector images and videos. Smart & elegant user interface finds the right file fast. Use intuitive finger swipes to browse through the archive. Hi-res preview images – know exactly what you're downloading. Use favorites to save and organize files you like. Depositphotos' image library is constantly refreshed, growing by thousands of files daily. Our developers took part of the maintaining and supporting of this project.",
+        description: "Millions of professional royalty-free stock photos, vector images and videos. Smart & elegant user interface finds the right file fast. Use intuitive finger swipes to browse through the archive. Hi-res preview images – know exactly what you're downloading. Use favorites to save and organize files you like. Depositphotos' image library is constantly refreshed, growing by thousands of files daily.",
         linksData: [
           [ 'Appstore', 'https://itunes.apple.com/app/depositphotos/id919098408' ],
           [ 'Playmarket', 'https://play.google.com/store/apps/details?id=com.depositphotos.root' ]
