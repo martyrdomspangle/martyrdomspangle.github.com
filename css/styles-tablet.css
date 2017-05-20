@@ -128,6 +128,10 @@ header.menu ul li p {
     color: rgb(237, 103, 58);
   }
 
+  header.main .social-icons {
+    display: none;
+  }
+
   footer {
     position: absolute;
     bottom: 0;
