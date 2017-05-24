@@ -323,14 +323,15 @@ footer .social-icons li .icon-twitter:before {
 }
 
 .responsive-ul > li {
-  display: inline-table;
-  table-layout: fixed;
   width: 25%;
 }
 
 .image-container, .info-container {
-  display: inline-block;
-  vertical-align: top;
+  float: left;
+}
+
+.labels .image-container img {
+  width: 100%;
 }
 
 .info-container {
