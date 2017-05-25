@@ -52,15 +52,15 @@ $(document).ready(function () {
   });
 
   //////
-    $('bodyss').on('click', 'a[href*="#"]:not([href="#"], .menu a)', function(e) {
+    $('body').on('click', 'a[href*="#"]:not([href="#"], .menu a)', function(e) {
       e.preventDefault();
       var $rootElement = $('html, body');
         var href = $.attr(this, 'href');
+        window.location.href = href;
+        href = href + '_';
         $rootElement.animate({
             scrollTop: $(href).offset().top
-        }, 800, function(){
-          window.location.hash = href;
-        });
+        }, 800);
 
     });
 
@@ -87,6 +87,7 @@ function setActive(e, id) {
 
   // show current
   var page = id || $(this).attr('href');
+  page = page + '_';
   $(page).show();
 };
 
