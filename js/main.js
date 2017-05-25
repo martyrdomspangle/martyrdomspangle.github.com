@@ -52,17 +52,16 @@ $(document).ready(function () {
   });
 
   //////
-    $('body').on('click', 'a[href*="#"]:not([href="#"])', function() {
-      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-        if (target.length) {
-          $('html, body').animate({
-            scrollTop: target.offset().top
-          }, 1000);
-          return false;
-        }
-      }
+    $('bodyss').on('click', 'a[href*="#"]:not([href="#"], .menu a)', function(e) {
+      e.preventDefault();
+      var $rootElement = $('html, body');
+        var href = $.attr(this, 'href');
+        $rootElement.animate({
+            scrollTop: $(href).offset().top
+        }, 800, function(){
+          window.location.hash = href;
+        });
+
     });
 
   $('.wrapper').on('click', '.desc-more', function(event){
