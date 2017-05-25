@@ -30,7 +30,6 @@
 
 .page-team .social-icons {
   padding: 4px 0 0 0;
-  padding: 0.285714rem 0 0 0;
 }
 
 .page-team .social-icons > li {
@@ -38,14 +37,11 @@
   display: block;
   float: left;
   width: 28px;
-  width: 2rem;
   height: 32px;
-  height: 2.285714rem;
 }
 
 .page-team .social-icons > li + li {
   margin-left: 14px;
-  margin-left: 1rem;
 }
 
 .page-team .social-icons li i {
