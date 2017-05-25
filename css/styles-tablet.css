@@ -190,6 +190,7 @@ header.menu ul li p {
     margin: 0;
     width: 45%;
     margin-bottom: 16px;
+    float: left;
   }
 
   ul.labels li.label-first {
